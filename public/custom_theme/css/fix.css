@@ -1,0 +1,91 @@
+.label-intext {
+ padding: 3px 5px !important;
+ margin: 0 !important;
+ color: #000;
+ font-size: 100%;
+}
+
+ .displayed{background: #ccffd0;}
+.displayed:hover{background: #aedb9a;}
+
+.incoming{}
+.incoming:hover{}
+.incoming .message-text:hover{cursor: pointer}
+
+.rejected{background: #ffcccc;}
+.rejected:hover{background: #ffb3b3;}
+
+.approved{background: #ccddff;}
+.approved:hover{background: #b3d0ff;}
+
+.message-text{color: #000000; font-size:16px; word-break:break-all;}
+
+.modal-message-text{ word-break:break-all;}
+
+#info-comment-displayed{ word-break:break-all;}
+
+.log-message-text{color: #000000; word-break:break-all;}
+
+.default-label-intext {
+ padding: 3px 5px !important;
+ margin: 0 !important;
+ background: blue;
+ color: #FFF;
+ font-size: 100%;
+}
+
+.highp-label-intext {
+ padding: 3px 5px !important;
+ margin: 0 !important;
+ background: red;
+ color: #FFF;
+ font-size: 100%;
+}
+
+.tile-stats{
+  padding: 0px !important;
+}
+.tile-stats .label-warning.label{
+  color: #000000;
+}
+
+.tile-stats .panel-heading h4,a{
+  color: #8A8A8A;
+}
+
+.panel-heading > .panel-options {
+	float: none;
+}
+
+.autogrow {
+    resize: vertical !important;
+    min-height: 50px !important;
+}
+
+confirm-danger-label {
+ padding: 3px 5px !important;
+ margin: 0 !important;
+ background: red;
+ color: #FFF;
+ font-size: 100%;
+ display: inline;
+ font-size: 200%;
+ font-weight: 400;
+ line-height: 1;
+ text-align: center;
+ white-space: nowrap;
+ vertical-align: baseline;
+ border-radius: 3px;
+}
+
+.menu_dropdown_bar{
+    margin-right: 50px !important;
+}
+
+.dropdown_bar{
+    min-width: 100px !important;
+}
+
+.main-position{
+	margin-right:50px;
+}

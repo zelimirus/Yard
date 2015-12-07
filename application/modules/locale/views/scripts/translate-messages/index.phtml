@@ -1,0 +1,113 @@
+<?php $new_translate = $this->url(array("module" => "locale", "controller" => "translate-messages", "action" => "new"), "default", true); ?>
+<?php $keys = $this->url(array('module' => 'locale', 'controller' => 'translate-keys'), 'default', true); ?>
+<?php $tr_countries = $this->url(array('module' => 'locale', 'controller' => 'languages', 'action' => 'index'), 'default', true); ?>
+<?php $new_key = $this->url(array("module" => "locale", "controller" => "translate-keys", "action" => "new"), "default", true); ?>
+<?php $countries = $this->url(array('module' => 'locale', 'controller' => 'countries'), 'default', true); ?>
+<?php $new_country = $this->url(array("module" => "locale", "controller" => "languages", "action" => "new"), "default", true); ?>
+<?php $upload = $this->url(array("module" => "locale", "controller" => "translate-messages", "action" => "upload"), "default", true); ?>
+<?php $download_csv = $this->url(array("module" => "locale", "controller" => "translate-messages", "action" => "download-csv"), "default", true); ?>
+<?php $download_empty_csv = $this->url(array("module" => "locale", "controller" => "translate-messages", "action" => "download-csv", "empty" => "1"), "default", true); ?>
+
+
+<div class="page-header"><h3>Translate</h3></div>
+<div>
+    <?php if($this->user->role_id == Zend_Registry::get('superadmin_role_id')){ ?>
+    <div class="btn-group  pull-left">
+        <a class="btn btn-info" href="<?php echo $keys; ?>">Keys</a>
+        <a class="btn btn-info" href="<?php echo $tr_countries; ?>">Languages</a>
+        <a class="btn btn-info" href="<?php echo $countries; ?>">Countries</a>
+    </div>
+    <?php }?>
+
+    <?php if($this->user->role_id == Zend_Registry::get('superadmin_role_id')){ ?>
+    <a href="<?php echo $new_translate; ?>" class="btn btn-info pull-right left-05"> <i class="icon-plus-sign"></i> Add translation</a>
+    <div class="btn-group  pull-right">
+        <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="icon-download-alt"></i> Download CSV <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="<?php echo $download_csv; ?>">With current data</a></li>
+            <li><a href="<?php echo $download_empty_csv; ?>">With basic data</a></li>
+        </ul>
+    </div>
+    <a href="<?php echo $upload; ?>" class="btn btn-success pull-right right-05"> <i class="icon-upload"></i> Upload</a>
+    <?php } ?>
+
+</div>
+
+
+
+<br/><br/>
+
+<?php if (count($this->translates)){ ?>
+    <table cellpadding="0" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
+        <?php echo $this->partial("partials/table_list_header.phtml", "locale", array("headers" => $this->header)); ?>
+        <tbody>
+            <?php foreach ($this->keys as $key){ //top side ?>
+                <tr>
+                    <td><?php echo $key->key; ?></td>
+                    <?php foreach ($this->countries as $country){ ?>
+                        <td>
+                            <?php if (isset($this->translates[$key->key][$country->name]['value'])){ ?>
+                                <?php
+                                $edit_url = $this->url(array("module" => "locale", "controller" => "translate-messages", "action" => "edit", "id" => $this->translates[$key->key][$country->name]['id']), "default", true);
+                                $delete_url = $this->url(array("module" => "locale", "controller" => "translate-messages", "action" => "delete", "id" => $this->translates[$key->key][$country->name]['id']), "default", true);
+                                ?>
+
+                                <?php if (strlen($this->translates[$key->key][$country->name]['value']) > 40){ ?>
+                                    <?php echo mb_substr($this->translates[$key->key][$country->name]['value'], 0, 25); ?> ...
+                                    <?php echo mb_substr($this->translates[$key->key][$country->name]['value'], -5); ?>
+                                <?php } else{ ?>
+                                    <?php echo $this->translates[$key->key][$country->name]['value']; ?>
+                                <?php } ?>
+
+                                <div class="btn-group pull-right btn-group-xs">
+                                    <button type="button" class="btn btn-default" onclick="location.href = '<?php echo $edit_url ?>'" >
+                                        <span class="glyphicon glyphicon-edit" data-original-title="Edit Informations" onmouseover="$(this).tooltip('show');" rel="tooltip"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default" href="#" onclick='bootbox.confirm("Are you sure?<br/><br />", function(result) {
+                                                deleteHref(result, "<?php echo $delete_url; ?>")
+                                            });
+                                            return false;' >
+                                        <span class="glyphicon glyphicon-remove" data-original-title="Delete Data" onmouseover="$(this).tooltip('show');" rel="tooltip"></span>
+                                    </button>
+                                </div>
+                            <?php } else{ ?>
+                                <div class="btn-group pull-right btn-group-xs">
+                                    <?php $new_tr = $this->url(array("module" => "locale", "controller" => "translate-messages", "action" => "new", "c" => $country->id, "k" => $key->id), "default", true); ?>
+                                    <button class="btn btn-default pull-right" onclick="location.href = '<?php echo $new_tr ?>'">
+                                        <span class="glyphicon glyphicon-plus" data-original-title="Create new" onmouseover="$(this).tooltip('show');" rel="tooltip"></span>
+                                    </button>
+                                </div>
+                            <?php } ?>
+                        </td>
+                    <?php } ?>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+<?php } else{ ?>
+    <div class="alert alert-info">
+        <h3>Records not found.</h3>
+    </div>
+<?php } ?>
+
+<script type="text/javascript">
+                        /**
+                         * Get one user info and show it in modal box
+                         */
+                        function view(id) {
+                            jQuery.ajax({
+                                url: "<?php echo $this->url(array("module" => "locale", "controller" => "translate-messages", "action" => "show"), "default", true); ?>",
+                                type: "POST",
+                                data: {
+                                    id: id
+                                },
+                                dataType: "json",
+                                success: function(result) {
+                                    var html = "<b></b>" + result.value + "<br/>";
+                                    bootbox.alert(html);
+                                }
+                            });
+                        }
+</script>

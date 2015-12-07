@@ -1,0 +1,86 @@
+<div id="photo-wraper">
+	<div id="milenija">
+		<div><span><?php echo $this->translate('galery_tradition');?></span></div>
+	</div>
+	<div id="basta">
+		<div><span><?php echo $this->translate('galery_garden');?></span></div>
+	</div>
+	<div id="kreacije">
+		<div><span><?php echo $this->translate('galery_creations');?></span></div>
+	</div>
+	<div id="recepti">
+		<h3><?php echo $this->translate('galery_recepies');?></h3>
+			<ul>
+  				<li>- <?php echo $this->translate('galery_recepies_1');?></li>
+  				<li>- <?php echo $this->translate('galery_recepies_2');?></li>
+  				<li>- <?php echo $this->translate('galery_recepies_3');?></li>
+  				<li>- <?php echo $this->translate('galery_recepies_4');?></li>
+  				<li>- <?php echo $this->translate('galery_recepies_5');?></li>
+			</ul>
+		<p><?php echo $this->translate('galery_recepies_6');?></p>
+	</div>
+	<div id="restoran-slike">
+		<div><span><?php echo $this->translate('galery_restoran');?></span></div>
+	</div>
+	<div id="klik-pregled-galerija"></div>
+	<div id="waste"></div>
+	<div id="extended-footer4">
+	<h3><?php echo $this->translate('about_tel_our_segments');?></h3>
+	<div id="welcome-note2"></div>
+</div>
+</div>
+
+<div style="display:none">
+<?php 
+	foreach($this->restorant_gallery as $one){
+		$image_thumb_url = My_Utilities::getFullMediaPathDiffSizes($one ,'original');
+		$href = My_Utilities::getFullMediaPathDiffSizes($one ,'original');
+	?>
+		<a class="restorant_gallery fancybox" data-fancybox-group="group01" data-description="<?php echo $one['description']; ?>" data-id = "fancy-box_<?php echo $one['id']; ?>" href="<?php echo $href;?>">
+			<img src="<?php echo $image_thumb_url;?>" alt="img01" />
+		</a>
+	<?php }?>
+?>
+<?php 
+	foreach($this->creations_gallery as $one){
+		$image_thumb_url = My_Utilities::getFullMediaPathDiffSizes($one ,'original');
+		$href = My_Utilities::getFullMediaPathDiffSizes($one ,'original');
+	?>
+		<a class="creations_gallery fancybox" data-fancybox-group="group02" data-description="<?php echo $one['description']; ?>" data-id = "fancy-box_<?php echo $one['id']; ?>" href="<?php echo $href;?>">
+			<img src="<?php echo $image_thumb_url;?>" alt="img01" />
+		</a>
+	<?php }?>
+?>
+<?php 
+	foreach($this->tradition_gallery as $one){
+		$image_thumb_url = My_Utilities::getFullMediaPathDiffSizes($one ,'original');
+		$href = My_Utilities::getFullMediaPathDiffSizes($one ,'original');
+	?>
+		<a class="tradition_gallery fancybox" data-fancybox-group="group03" data-description="<?php echo $one['description']; ?>" data-id = "fancy-box_<?php echo $one['id']; ?>" href="<?php echo $href;?>">
+			<img src="<?php echo $image_thumb_url;?>" alt="img01" />
+		</a>
+	<?php }?>
+?>
+<?php 
+	foreach($this->garden_gallery as $one){
+		$image_thumb_url = My_Utilities::getFullMediaPathDiffSizes($one ,'original');
+		$href = My_Utilities::getFullMediaPathDiffSizes($one ,'original');
+	?>
+		<a class="garden_gallery fancybox" data-fancybox-group="group04" data-description="<?php echo $one['description']; ?>" data-id = "fancy-box_<?php echo $one['id']; ?>" href="<?php echo $href;?>">
+			<img src="<?php echo $image_thumb_url;?>" alt="img01" />
+		</a>
+	<?php }?>
+?>
+<?php 
+	foreach($this->recipes_gallery as $one){
+		$image_thumb_url = My_Utilities::getFullMediaPathDiffSizes($one ,'original');
+		$href = My_Utilities::getFullMediaPathDiffSizes($one ,'original');
+	?>
+		<a class="recipes_gallery fancybox" data-fancybox-group="group05" data-description="<?php echo $one['description']; ?>" data-id = "fancy-box_<?php echo $one['id']; ?>" href="<?php echo $href;?>">
+			<img src="<?php echo $image_thumb_url;?>" alt="img01" />
+		</a>
+	<?php }?>
+?>
+</div>
+
+

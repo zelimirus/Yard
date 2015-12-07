@@ -1,0 +1,45 @@
+<?php
+$urlParams = array();
+foreach(Zend_Controller_Front::getInstance()->getRequest()->getParams() as $urlParamsKey => $urlParamsVal){
+	if(!in_array($urlParamsKey, array('module', 'controller', 'action', 'page'))){
+		if($urlParamsKey == 'Search')
+		continue;
+		$urlParams[$urlParamsKey] = $urlParamsVal;
+	}
+}
+?>
+<?php if($this->pageCount > 1):?>
+
+<ul class="pagination">
+	<!-- First/Previous page links -->
+<?php if(isset($this->previous)):?>
+	<li><a
+		href="<?php echo $this->url(array_merge(array('page' => 1), $urlParams));?>">First</a></li>
+	<li><a
+		href="<?php echo $this->url(array_merge(array('page' => $this->previous), $urlParams));?>">Prev</a></li>
+		<?php else:?>
+	<li><span class="disabled">First</span></li>
+	<li><span class="disabled">Prev</span></li>
+	<?php endif;?>
+	<!-- Numbered page links -->
+	<?php foreach($this->pagesInRange as $page):?>
+	<?php if($page != $this->current):?>
+	<li><a
+		href="<?php echo $this->url(array_merge(array('page' => $page), $urlParams));?>"><?php echo $page;?></a>
+	</li>
+	<?php else:?>
+	<li><span class="active"><?php echo $page;?></span></li>
+	<?php endif;?>
+	<?php endforeach;?>
+	<!-- Next/Last page links -->
+	<?php if(isset($this->next)):?>
+	<li><a
+		href="<?php echo $this->url(array_merge(array('page' => $this->next), $urlParams));?>">Next</a></li>
+	<li><a
+		href="<?php echo $this->url(array_merge(array('page' => $this->last), $urlParams));?>">Last</a></li>
+		<?php else:?>
+	<li><span class="disabled">Next</span></li>
+	<li><span class="disabled">Last</span></li>
+	<?php endif;?>
+</ul>
+	<?php endif;?>

@@ -1,0 +1,119 @@
+<div class="page-header">
+	<h3><i class="entypo-globe"></i> Menu Items</h3>
+	<h5>You can reorder table rows by sorting by Order Id and dragging the rows </h5>
+</div>
+<span class="btn-group col-lg-12">
+	<?php echo $this->form;?>
+	<a href="<?php echo $this->url(array("module"	 => "admin", "controller" => "menu-items", "action"	 => "new"), "default", true);?>" class="pull-right btn btn-info left-05 btn-default"><i class="glyphicon glyphicon-plus-sign"></i> New Menu Item</a>
+</span>
+<hr/>
+<?php if(count($this->paginator)):?>
+	<table cellpadding="0" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
+		<?php echo $this->partial("partials/table_list_header.phtml", "admin", array("headers" => $this->header));?>
+		<tbody>
+			<?php foreach($this->paginator as $one):?>
+				<?php
+				$edit_url = $this->url(array("module" => "admin", "controller" => "menu-items", "action"	 => "edit", "id" => $one['id'], "page"	=> $this->page), "default", true);
+				$delete_url	 = $this->url(array("module" => "admin", "controller" => "menu-items", "action"	 => "delete", "id" => $one['id'], "page" => $this->page), "default", true);
+				?>
+				<tr id="<?php echo $one['id'];?>" page="<?php echo $this->page;?>" count-per-page="<?php echo $this->count_per_page;?>" sort="<?php echo $this->sort_by; ?>" direction="<?php echo $this->sort_type; ?>" total-number="<?php echo $this->total_number; ?>">
+					<td><?php echo $one['id'];?></td>
+					<td><?php echo $one['name'];?></td>
+					<td><?php echo $one['title'];?></td>
+					<td><?php echo $one['parent'];?></td>
+					<td><?php echo $one['module'];?></td>
+					<td><?php echo $one['controller'];?></td>
+					<td><?php echo $one['action'];?></td>
+                    <td><?php echo $one['params'];?></td>
+					<td><?php echo $one['order_id'];?></td>
+                    <td><?php echo $one['is_active'] ? 'Yes' : 'No'; ?></td>						
+					<td> <div class="btn-group">
+							<a class="btn" href="<?php echo $edit_url?>" >
+								<i class="glyphicon glyphicon-edit" data-original-title="Edit Informations" onmouseover="$(this).tooltip('show');" rel="tooltip"></i>
+							</a>
+							<a class="btn" href="#" id="<?php echo $one['id'];?>" onclick='bootbox.confirm("Are you sure?<br/><br />", function(result){deleteHref(result, "<?php echo $delete_url;?>")});return	false;' >
+								<i class="glyphicon glyphicon-trash" data-original-title="Delete Data" onmouseover="$(this).tooltip('show');" rel="tooltip"></i>
+							</a> </div>
+					</td>
+				</tr>
+			<?php endforeach;?>
+		</tbody>
+	</table>
+	<?php echo $this->paginationControl($this->paginator, "Sliding", "/partials/pagination_control.phtml");?>
+<?php else:?>
+	<div class="alert alert-info">
+		<h3>No records found.</h3>
+	</div>
+<?php endif;?>
+
+<script type="text/javascript">
+
+    var fixHelper = function(e, ui) {
+        ui.children().each(function() {
+            $(this).width($(this).width());
+        });
+        return ui;
+    };
+
+    var page = parseInt($("tbody tr").eq(0).attr("page"));
+    var countPerPage = parseInt($("tbody tr").eq(0).attr("count-per-page"));
+    var sort = $("tbody tr").eq(0).attr("sort");
+    var direction = $("tbody tr").eq(0).attr("direction");
+    var totalNumber = $("tbody tr").eq(0).attr("total-number");
+    var ajaxRequest = null;
+
+    if (sort === 'order_id'){
+
+        $( "tbody" ).sortable({
+            items: "tr",
+            cursor: 'move',
+            helper:fixHelper,
+            placeholder:'reorder-placeholder',
+            opacity: 0.9,
+            update: function(e, ui) {
+                sendOrderToServer();
+            }
+        }).disableSelection();
+
+        $( "tbody > tr" ).css("cursor","move");
+    }
+
+    function sendOrderToServer() {
+
+        var order = [];
+        $("tbody tr").each(function(){
+            order.push($(this).attr('id'));
+        })
+
+        var data = {
+            page: page,
+            row: order,
+            count: countPerPage,
+            direction: direction,
+            total: totalNumber
+        }
+
+        if (ajaxRequest) {
+            ajaxRequest.abort();
+        }
+
+        ajaxRequest = $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/admin/menu-items/update-order",
+            data:data,
+            success: function(response) {
+                if (response.success == true) {
+                    ajaxRequest = null;
+                    alertFlashMessenger('success','Change order is success.');
+                    setTimeout(function(){
+                        location.reload();                
+                    },1000);
+                } else {
+                    alert('Some error occurred');
+                }
+            }
+        });
+    }
+
+</script>

@@ -1,0 +1,59 @@
+<?php $new_media_library = $this->url(array("module" => "cms", "controller" => "media-libraries", "action" => "new"), "default", true); ?>
+<div class="page-header">
+    <h3>
+        Galerije
+    </h3>
+</div>
+<div>
+    <?php echo $this->form; ?>
+    <?php if($this->user->role_id == Zend_Registry::get('superadmin_role_id')){ ?>  
+        <a href="<?php echo $new_media_library;?>" class="btn btn-info pull-right left-05"> <i class="icon-plus-sign"></i>
+        Dodaj novu
+    </a>
+    <?php } ?>
+</div>
+<br />
+<br />
+<div class="content-reload" data-reloadUrl="<?php echo $this->url(array("module" => "cms", "controller" => "media-libraries", "action" => "index"), "default", true); ?>">
+    <?php if (count($this->paginator)): ?>
+        <table cellpadding="0" cellspacing="0" width="100%" class="table table-striped table-hover table-bordered">
+            <?php echo $this->partial("partials/table_list_header.phtml", "cms", array("headers" => $this->header)); ?>
+            <tbody>
+                <?php foreach ($this->paginator as $object): ?>
+                    <?php
+                    $view_url = $this->url(array("module" => "cms", "controller" => "medias", "action" => "index", "library_id" => $object->id, "page" => $this->page), "default", true);
+                    $edit_url = $this->url(array("module" => "cms", "controller" => "media-libraries", "action" => "edit", "id" => $object->id, "page" => $this->page), "default", true);
+                    $delete_url = $this->url(array("module" => "cms", "controller" => "media-libraries", "action" => "delete", "id" => $object->id, "page" => $this->page), "default", true);
+                    ?>
+                    <tr>                        
+                        <td><?php echo $object->id; ?></td>
+                        <td><?php echo $object->name; ?></td>                                          
+                        <td> <div class="btn-group">
+                                <a class="btn" href="<?php echo $view_url ?>" >
+                                    <i class="glyphicon glyphicon-eye-open" data-original-title="View library" onmouseover="$(this).tooltip('show');" rel="tooltip"></i>
+                                </a>
+                                <?php if($this->user->role_id == Zend_Registry::get('superadmin_role_id')){ ?>  
+                                    <a class="btn" href="<?php echo $edit_url ?>" >
+                                        <i class="glyphicon glyphicon-pencil" data-original-title="Edit Informations" onmouseover="$(this).tooltip('show');" rel="tooltip"></i>
+                                    </a>                                                    
+                                    <a class="btn" href="#" id="<?php echo $object->id; ?>"
+                                       onclick='bootbox.confirm("Da li ste sigurni?<br/><br />", function(result) {
+                                                deleteHref(result, "<?php echo $delete_url; ?>")
+                                            });
+                                            return  false;' >
+                                        <i class="glyphicon glyphicon-trash" data-original-title="Delete Data" onmouseover="$(this).tooltip('show');" rel="tooltip"></i>
+                                    </a> 
+                                <?php  } ?>
+                            </div>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+        <?php echo $this->paginationControl($this->paginator, "Sliding", "/partials/pagination_control.phtml"); ?>
+    <?php else: ?>
+        <div class="alert alert-info">
+            <h3>Nijedan zapis nije nađen.</h3>
+        </div>
+    <?php endif; ?>
+</div>

@@ -1,0 +1,897 @@
+@font-face {
+	font-family:regular;
+	src: url("../../fonts/regular.ttf");
+}
+#header {
+	position:fixed;
+	top:0px;
+	width: 100%;
+	z-index: 10;
+	height:212px;
+}
+#header-wraper{
+	position:relative;
+	left:45%;
+	margin-left: -820px;
+	height:212px;
+	width:1592px;
+}
+
+#dropdown{
+	display:none;
+}
+
+.nav{
+	display:none;
+}
+
+@media (min-width: 1625px) {
+
+#header-wraper{
+	position:relative;
+	left:0%;
+	margin-left:auto;
+	margin-right:auto;
+}
+	
+}
+#tablecloth-1 {
+	background-image: url("../../images/sr_rs/1170/tablecloth-1.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 1150px;
+	height: 212px;
+	position: absolute;
+	top:0px;
+	left:0px;
+	z-index:3;
+	pointer-events: none;
+}
+
+#gradient {
+	background-image: url("../../images/sr_rs/1170/gradient.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 1170px;
+	height: 216px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index:5;
+	opacity: 0.2;
+    pointer-events: none;
+}
+
+#blackgoard-logo {
+	background-image: url("../../images/sr_rs/1170/blackboard-logo.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 345px;
+	height: 190px;
+	position: absolute;
+	top: 0px;
+	left: 244px;
+	z-index:3;
+}
+
+#persil {
+	background-image: url("../../images/sr_rs/1170/persil.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 245px;
+	height: 294px;
+	position: absolute;
+	top: 0px;
+	left: 133px;
+	z-index:4;
+	pointer-events: none;
+}
+
+#coffe{
+	    background-image: url("../../images/sr_rs/1170/coffe.png");
+	    width:260px;
+	    height:373px;
+	    position:absolute;
+	    left: 61px;
+	    z-index: 4;
+	    left: 100px;
+	    pointer-events: none;
+}
+
+
+#zupska-avlija-logo-header {
+	background-image: url("../../images/sr_rs/1170/zupska-avlija-logo.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 196px;
+	height: 122px;
+	position: absolute;
+	top: 9px;
+	left: 323px;
+	z-index:3;
+}
+
+#tablecloth-2 {
+	background-image: url("../../images/sr_rs/1170/tablecloth-2.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 475px;
+	height: 73px;
+	position: absolute;
+	top: 0px;
+	left: 1122px;
+	z-index:3;
+	pointer-events: none;
+}
+
+#rooms {
+	background-image: url("../../images/sr_rs/1170/smestaj.png");
+	background-size: 208% 100%;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 140px;
+	height: 128px;
+	position: absolute;
+	top: 0px;
+	left: 1312px;
+	z-index:3;
+	color:white;
+}
+
+#rooms:hover {
+	background-position: -152px 0px;
+
+	#rooms-text{
+	color:#DCC326;
+}
+
+
+	
+}
+
+#rooms-text{
+	position:absolute;
+	top:77px;
+	left:39px;
+	text-decoration:none;
+		
+}
+
+#rooms2 {
+	background-image: url("../../images/sr_rs/1170/falenta.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 140px;
+	height: 162px;
+	position: absolute;
+	top: 0px;
+	left: 1312px;
+	z-index:3;
+	color:white;
+
+		#rooms-text{
+		color:#45542A;
+		left: 38px;
+	}
+}
+
+
+
+
+#about {
+	background-image: url("../../images/sr_rs/1170/malo-o-nama.png");
+	background-size: 100% 200%;
+	background-repeat: no-repeat;
+	background-position: 0px -150px;
+	width: 146px;
+	height: 158px;
+	position: absolute;
+	top: 0px;
+	left: 633px;
+	z-index:1;
+}
+#about:hover {
+	background-position: 0px 16px;
+	
+}
+
+#contact {
+	background-image: url("../../images/sr_rs/1170/kontakt.png");
+	background-size: 100% 200%;
+	background-repeat: no-repeat;
+	background-position: 0px -160px;
+	width: 149px;
+	height: 164px;
+	position: absolute;
+	top: 0px;
+	left: 1090px;
+	z-index: 1;
+}
+#contact:hover {
+	background-position: 0px 10px;
+	
+}
+
+#menu {
+	background-image: url("../../images/sr_rs/1170/index-jelovnik.png");
+	background-size: 100% 200%;
+	background-repeat: no-repeat;
+	background-position: 0px -169px;
+    width: 163px;
+    height: 172px;
+    position: absolute;
+    top: 0px;
+    left: 780px;
+    z-index: 1;
+}
+#menu:hover {
+	background-position: 0px 7px;
+	
+}
+
+#gallery{
+	background-image: url("../../images/sr_rs/1170/foto-galerija.png");
+	background-size: 100% 200%;
+	background-repeat: no-repeat;
+	background-position: 0px -169px;
+	width: 153px;
+	height: 166px;
+	position: absolute;
+	top: 0px;
+	left: 940px;
+	z-index: 1;
+}
+#gallery:hover {
+	background-position: 0px 7.1px;
+	
+}
+
+#english-symbol {
+	background-image: url("../../images/sr_rs/1170/english-symbol.png");
+	background-size: 100% 200%;
+	background-repeat: no-repeat;
+	background-position: 0px -23px;
+	width: 66px;
+	height: 22.5px;
+	position: absolute;
+	top: 20px;
+	left: 1205px;
+	z-index:3;
+}
+
+#english-symbol:hover {
+	background-position: 0px 0px;
+	
+}
+
+@-moz-document url-prefix() {
+    
+	#rooms:hover {
+	background-position: -151px 0px;	
+	}
+
+	#contact {
+	background-image: url("../../images/sr_rs/1170/kontakt.png");
+	background-size: 100% 200%;
+	background-repeat: no-repeat;
+	background-position: 0px -175px;
+	width: 149px;
+	height: 171px;
+	position: absolute;
+	top: 0px;
+	left: 1090px;
+	z-index: 1;
+}
+
+	#contact:hover {
+	background-position: 0px 2.7px;
+}
+	#rooms-text {
+	    position: absolute;
+	    top: 77px;
+	    left: 32px;
+	    text-decoration: none;
+	}
+
+	a{
+		text-decoration:none;
+	}
+
+	#rooms2 {
+	background-image: url("../../images/sr_rs/1170/falenta.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 140px;
+	height: 162px;
+	position: absolute;
+	top: 0px;
+	left: 1312px;
+	z-index:3;
+	color:white;
+
+		#rooms-text{
+		color:#45542A;
+		left: 31px;	
+	}
+
+}
+
+	
+}
+
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+	 
+	#rooms:hover {
+		background-position: -151px 0px;	
+	}
+  		
+	#menu:hover {
+	background-position: 0px 7.3px;
+	
+	}
+
+		#contact:hover {
+	background-position: 0px 2.8px;
+}
+	 
+
+	}
+
+
+
+@media(max-width: 1170px) {
+
+#blackgoard-logo {
+	background-image: url("../../images/sr_rs/970/blackboard.png");
+	left: 292px;
+	width:269px;
+	height:173px;
+	
+}
+#tablecloth-2 {
+	left: 951px;
+}
+
+
+#english-symbol {
+	left: 1035px;
+}
+
+#rooms {
+	left: 1145px;
+}
+
+#zupska-avlija-logo-header {
+	top: 11px;
+	left: 327px;
+}
+#about{
+	left:553px;
+}
+
+#menu{
+	left:696px;
+}
+
+#gallery{
+	left:853px;
+}
+
+#contact{
+	left:995px;
+}
+
+#header-wraper{
+	margin-left:-754px;
+}
+
+#rooms2 {
+	left: 1145px;
+}
+
+}
+
+
+
+@media(max-width: 970px) {
+
+
+#header-wraper{
+	margin-left: -584px;
+
+}
+
+
+#blackgoard-logo {
+	background-image: url("../../images/sr_rs/750/blackboard-logo.png");
+	width:223px;
+	height:143px;
+	left:226px;
+
+}
+
+
+#tablecloth-1 {
+	background-image: url("../../images/sr_rs/750/tablecloth-1.png");
+	width:798px;
+	height:153px;
+
+
+}
+
+#gradient {
+	background-image: url("../../images/sr_rs/750/gradient.png");
+	width:794px;
+	height:147px;
+
+
+}
+
+
+#persil {
+	background-image: url("../../images/sr_rs/750/persil.png");
+	width:183px;
+	height:219px;
+	left:117px;
+
+
+}
+#blackgoard-logo {
+	background-image: url("../../images/sr_rs/750/blackboard-logo.png");
+	width:223px;
+	height:143px;
+
+
+}
+#zupska-avlija-logo-header {
+	background-image: url("../../images/sr_rs/750/zupska-avlija-logo.png");
+  width: 156px;
+  height: 97px;
+  left: 256px;
+  top: 3px;
+
+	
+}
+
+#tablecloth-2 {
+	background-image: url("../../images/sr_rs/750/tablecloth-2.png");
+	width:445px;
+	height:68px;
+	left:692px;
+
+
+}
+
+#rooms {
+	background-image: url("../../images/sr_rs/750/smestaj.png");
+	width:117px;
+	height:100px;
+	left:882px;
+
+
+}
+
+#rooms2 {
+	background-image: url("../../images/sr_rs/750/falenta.png");
+	width:109px;
+	height:126px;
+	left: 882px;
+
+		#rooms-text{
+		left: 24px;
+	}
+}
+
+
+#rooms:hover {
+	background-position: -128px 0px;
+	
+}
+#about:hover {
+	background-position: 0px 15px;
+	
+}
+#contact:hover {
+	background-position: 0px 8px;
+	
+}
+#menu:hover {
+	background-position: 0px 0px;
+	
+}
+#gallery:hover {
+	background-position: 0px 0px;
+	
+}
+#english-symbol:hover {
+	background-position: 0px 2px;
+	
+}
+
+#rooms-text{
+	top: 61px;
+  	left: 28px;
+}
+
+#about {
+	background-image: url("../../images/sr_rs/750/malo-o-nama.png");
+	width:125px;
+	height:155px;
+	left:420px;
+	top: -8px;
+
+
+}
+
+#contact {
+	background-image: url("../../images/sr_rs/750/kontakt.png");
+	width:126px;
+	height:155px;
+	left:765px;
+	top: -18px;
+
+
+}
+
+#menu {
+	background-image: url("../../images/sr_rs/750/index-jelovnik.png");
+	width:126px;
+	height:155px;
+	left:537px;
+
+}
+
+#gallery{
+	background-image: url("../../images/sr_rs/750/foto-galerija.png");
+	width:125px;
+	height:157px;
+	left:654px;
+}
+
+#english-symbol {
+	background-image: url("../../images/sr_rs/750/english-symbol.png");
+	background-position: 0px -25px;
+	width:62px;
+	height:23.5px;
+	left: 769px;
+}
+
+#coffe{
+	    background-image: url("../../images/sr_rs/750/coffe.png");
+	    width:214px;
+	    height:306px;
+	    position:absolute;
+	    left: 73px;
+	    z-index: 4;
+	    pointer-events: none;
+}
+
+
+}
+
+
+@-moz-document url-prefix() {
+
+@media(max-width: 970px) {
+
+
+#rooms-text {
+    top: 57px;
+    left: 22px;
+}
+
+#contact{
+	left:765px;
+	top:0px;
+}
+
+#rooms:hover {
+	background-position: -128px 0px;
+	
+}
+#about:hover {
+	background-position: 0px 15px;
+	
+}
+#contact:hover {
+	background-position: 0px -7px;
+	
+}
+#menu:hover {
+	background-position: 0px -1px;
+	
+}
+#gallery:hover {
+	background-position: 0px -1px;
+	
+}
+#english-symbol:hover {
+	background-position: 0px 2px;
+	
+}
+
+#rooms2 #rooms-text {
+    left: 17px;
+}
+}
+    
+}
+
+
+
+
+
+@media(max-width: 750px) {
+
+
+#header-wraper{
+	position:relative;
+	left: 60%;
+  	margin-left: -362px;
+	height:212px;
+	width:620px;
+}
+
+
+#tablecloth-1 {
+	background-image: url("../../images/sr_rs/480/krpa.png");
+	width: 614px;
+	height: 152px;
+	position: absolute;
+	left:0px;
+}
+
+
+
+#blackgoard-logo {
+	background-image: url("../../images/sr_rs/480/board.png");
+	width:220px;
+	height:143px;
+	left:94px;
+}
+
+
+
+
+#gradient {
+	display:none;
+}
+
+
+#persil {
+	background-image: url("../../images/sr_rs/480/pesun.png");
+	width:167px;
+	height:201px;
+	left:-11px;
+
+}
+
+#coffe{
+	    background-image: url("../../images/sr_rs/480/kafa-zrno.png");
+	    width:277px;
+	    height:178px;
+	    position:absolute;
+	    left: 61px;
+	    z-index: 4;
+	    left:-40px;
+	    pointer-events: none;
+}
+
+
+#zupska-avlija-logo-header {
+	background-image: url("../../images/sr_rs/480/logo-zupska-avlija.png");
+  width: 154px;
+  height: 91px;
+  left: 122px;
+  top: 9px;
+
+	
+}
+
+#tablecloth-2 {
+	display:none;
+
+}
+
+#rooms {
+	display:none;
+
+	
+
+}
+
+#rooms2 {
+	display:none;	
+}
+
+
+#english-symbol {
+	background-image: url("../../images/sr_rs/480/english.png");
+	background-size: 100% 100%;
+	background-position: 0px 0px;
+	width:58px;
+	height:18px;
+	left: 312px;
+	top:11px;
+}
+
+#english-symbol:hover {
+	background-position: 0px 0px;
+}
+
+
+#about {
+	display:none;
+ 
+
+
+}
+
+#contact {
+	display:none;
+}
+
+#menu {
+	display:none;
+
+}
+
+#gallery{
+	display:none;
+	
+}
+
+#dropdown{
+	display:block;
+	background-image: url("../../images/sr_rs/480/falenta.png");
+	background-size: 100% 200%;
+	background-position: 0% 100%;
+	width:97px;
+	height:95px;
+	position: absolute;
+  	top: -6px;
+  	left: 456px;
+  	z-index: 5;
+}
+
+#dropdown:hover{
+	background-image: url("../../images/sr_rs/480/falenta.png");
+	background-position: 0% 0%;
+	top: 0px;
+}
+
+.nav{
+	background-color:#005429;
+	width:371px;
+	height:883px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:100;
+	color:white;
+
+
+	#background{
+	background-image: url("../../images/sr_rs/480/heder-slika.jpg");
+	background-position: 0% 0%;
+	width:371px;
+	height:176px;
+	margin-bottom:5px;
+	border-bottom:none;
+
+
+	}
+
+	p {
+		display:block;
+		width:100%;
+		height:27px;
+		font-size: 13px;
+  		text-align: left;
+  		padding-top: 4px;
+  		padding-left: 15px;
+  		font-family:regular;
+	}
+
+	a {
+		display:block;
+		color:black;
+		background-color:#FEFCF3;
+		width:100%;
+		height:59px;
+		border-bottom: solid #E1DECF 1px;
+		text-decoration:none;
+		margin-bottom: -18px;
+		text-align: left;
+		padding-top:16px;
+		padding-left:52px;
+		font-family:regular;
+		font-size:20px;
+
+	}
+
+	h3 {
+		font-size: 11px;
+  		padding-top: 23px;
+  		text-align: center;
+  		font-family:regular;
+	}
+
+	#nav-about{
+	background-image: url("../../images/sr_rs/480/icon-malo-o-nama.png");
+	background-repeat: no-repeat;
+	background-position: 15px 50%;
+
+	}
+
+	#nav-contact{
+	background-image: url("../../images/sr_rs/480/icon-kontakt.png");
+	background-repeat: no-repeat;
+	background-position: 15px 50%;
+
+	}
+
+	#nav-menu{
+	background-image: url("../../images/sr_rs/480/icon-jelovnik.png");
+	background-repeat: no-repeat;
+	background-position: 15px 50%;
+
+	}
+
+	#nav-gallery{
+	background-image: url("../../images/sr_rs/480/icon-foto-galerija.png");
+	background-repeat: no-repeat;
+	background-position: 15px 50%;
+
+	}
+
+	#nav-rooms{
+	background-image: url("../../images/sr_rs/480/icon-smestaj.png");
+	background-repeat: no-repeat;
+	background-position: 15px 50%;
+
+	}
+
+	#nav-facebook{
+	background-image: url("../../images/sr_rs/480/icon-fb.png");
+	background-repeat: no-repeat;
+	background-position: 15px 50%;
+
+	}
+
+	#nav-google{
+	background-image: url("../../images/sr_rs/480/icon-google-plus.png");
+	background-repeat: no-repeat;
+	background-position: 15px 50%;
+
+	}
+
+	#nav-trip{
+	background-image: url("../../images/sr_rs/480/icon-trip-adviror.png");
+	background-repeat: no-repeat;
+	background-position: 15px 50%;
+
+	}
+
+	#nav-google-map{
+	background-image: url("../../images/sr_rs/480/icon-google-map.png");
+	background-repeat: no-repeat;
+	background-position: 15px 50%;
+
+	}
+
+	#nav-friend{
+	background-image: url("../../images/sr_rs/480/icon-send-frends.png");
+	background-repeat: no-repeat;
+	background-position: 15px 50%;
+
+	}
+	
+}
+
+}
+
+

@@ -1,0 +1,24 @@
+<div id="manu-wraper">
+<div id="bread" ></div>
+<div id="dinar"></div>
+<div id="menu-menu" ></div>
+<div id="klik"><?php echo $this->translate('menu_click', false); ?></div>
+<div id="pepper-menu"></div>
+<div id="cheese" ></div>
+<div id="extended-footer3">
+	<h3><?php echo $this->translate('about_tel_our_segments');?></h3>
+	<div id="welcome-note3"></div>
+</div>
+</div>
+<div style="display:none">
+<?php 
+	foreach($this->menu_gallery as $one){
+		$image_thumb_url = My_Utilities::getFullMediaPathDiffSizes($one ,'original');
+		$href = My_Utilities::getFullMediaPathDiffSizes($one ,'original');
+	?>
+		<a class="menu_gallery fancybox" data-fancybox-group="group01" data-description="<?php echo $one['description']; ?>" data-id = "fancy-box_<?php echo $one['id']; ?>" href="<?php echo $href;?>">
+			<img src="<?php echo $image_thumb_url;?>" alt="img01" />
+		</a>
+	<?php }?>
+?>
+</div>

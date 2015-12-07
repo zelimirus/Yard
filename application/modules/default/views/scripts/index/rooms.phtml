@@ -1,0 +1,42 @@
+<div id="book-hotel">
+	<div id="rooms-content-text">
+		<p>				
+			<?php echo $this->translate('rooms_page_main');?>
+		</p>
+	</div>
+	<div id="key"></div>
+	<div id="rooms-photo1" class="rooms_gallery_triger">
+		<div>
+			<span><?php echo $this->translate('rooms_galery');?></span>
+		</div>
+	</div>
+	<div id="postcard">
+			<span class="span a"><?php echo $this->translate('rooms_postcard_1');?></span>
+			<span class="span b "><a href="tel:38137759200"><?php echo $this->translate('rooms_postcard_2');?></a></span>
+			<span class="span c"><?php echo $this->translate('rooms_postcard_3');?></span>
+			<span class="span d "><a href="tel:38137759200"><?php echo $this->translate('rooms_postcard_4');?></a></span>
+			<span class="span e"><a class="black" href="mailto:contact@zupskaavlija.com" target="_blank"><?php echo $this->translate('rooms_postcard_5');?></span></a>
+			<span class="span f"><?php echo $this->translate('rooms_postcard_6');?></span>
+			<span class="span g"><?php echo $this->translate('rooms_postcard_7');?></span>
+			<span class="span h"><?php echo $this->translate('rooms_postcard_8');?></span>
+			<span class="span i"><?php echo $this->translate('rooms_postcard_9');?></span>
+			<span class="span j"><?php echo $this->translate('rooms_postcard_10');?></span>
+	</div>
+<div id="extended-footer5">
+	<h3><?php echo $this->translate('about_tel_our_segments');?></h3>
+	<div id="welcome-note2"></div>
+</div>
+</div>
+
+<div style="display:none">
+<?php 
+	foreach($this->rooms_gallery as $one){
+		$image_thumb_url = My_Utilities::getFullMediaPathDiffSizes($one ,'original');
+		$href = My_Utilities::getFullMediaPathDiffSizes($one ,'original');
+	?>
+		<a class="rooms_gallery fancybox" data-fancybox-group="group01" data-description="<?php echo $one['description']; ?>" data-id = "fancy-box_<?php echo $one['id']; ?>" href="<?php echo $href;?>">
+			<img src="<?php echo $image_thumb_url;?>" alt="img01" />
+		</a>
+	<?php }?>
+?>
+</div>

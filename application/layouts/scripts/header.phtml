@@ -1,0 +1,46 @@
+<?php $action=Zend_Controller_Front::getInstance()->getRequest()->getActionName();
+	if($action=='about'){
+		$id="coffe";$rooms="rooms";
+	}elseif($action=='menu'){
+		$id="ladybug";$rooms="rooms";
+	}elseif($action=='rooms'){
+		$id="persil";$rooms="rooms2";
+	}else{
+		$id="persil";$rooms="rooms";
+	}
+?>
+<div id="header">
+	<div id="header-wraper">
+		<div id ="tablecloth-1"></div>
+		<div id ="gradient"></div>
+		<div id ="blackgoard-logo"></div>
+		<div id ="<?php echo $id;?>"></div>
+		<a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'index'), 'default', true); ?>"><div id ="zupska-avlija-logo-header"></div></a>
+		<div id ="tablecloth-2"></div>
+		<a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'rooms'), 'rooms_page', true); ?>"><div id ="<?php echo $rooms;?>"><span id="rooms-text"><?php echo $this->translate('head_rooms_title');?></span></div></a>	
+		<a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'about'), 'about_page', true); ?>"> <div id ="about"></div></a>
+		<a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'contact'), 'contact_page', true); ?>"><div id ="contact"></div></a>
+		<a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'menu'), 'menu_page', true); ?>"><div id ="menu"></div></a>
+		<a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'gallery'), 'gallery_page', true); ?>"><div id ="gallery"></div></a>
+		<a href="?lang=<?php echo (Zend_Registry::get('Zend_Locale') == 'en_GB') ? 'sr_RS' : 'en_GB';?>"><div id ="english-symbol"></div></a>	
+		<div id="dropdown"></div>
+	</div>
+</div>
+<div class="full">
+</div>
+<nav class="nav">
+	<a id="background" href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'index'), 'default', true); ?>"></a>
+	<a id="nav-about" href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'about'), 'about_page', true); ?>"><?php echo $this->translate('head_tel_about');?></a><br>
+	<a id="nav-contact" href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'contact'), 'contact_page', true); ?>"><?php echo $this->translate('head_tel_contact');?></a><br>
+	<a id="nav-menu" href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'menu'), 'menu_page', true); ?>"><?php echo $this->translate('head_tel_menu');?></a><br>
+	<a id="nav-gallery" href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'gallery'), 'gallery_page', true); ?>"><?php echo $this->translate('head_tel_galery');?></a><br>
+	<a id="nav-rooms" href="<?php echo $this->url(array('module' => 'default', 'controller' => 'index', 'action' => 'rooms'), 'rooms_page', true); ?>"><?php echo $this->translate('head_tel_rooms');?></a><br>
+	<p><?php echo $this->translate('head_tel_fallow');?></p>
+	<a id="nav-facebook" href="https://www.facebook.com/ZupskaAvlija"><?php echo $this->translate('head_tel_fb');?></a><br>
+	<a id="nav-google" href=" https://plus.google.com/110763289417290509926"><?php echo $this->translate('head_tel_g');?></a><br>
+	<a id="nav-trip" href="http://www.tripadvisor.com/Restaurant_Review-g6417666-d7280474-Reviews-Zupska_Avlija-Aleksandrovac_Central_Serbia.html"><?php echo $this->translate('head_tel_ta');?></a><br>
+	<p><?php echo $this->translate('head_tel_come');?></p>
+	<a id="nav-google-map" href="#"><?php echo $this->translate('head_tel_gmap');?></a><br>
+	<a id="nav-friend" href="#"><?php echo $this->translate('head_tel_coordinates');?></a><br>
+	<h3><?php echo $this->translate('head_tel_workhours');?></h3>
+</nav>

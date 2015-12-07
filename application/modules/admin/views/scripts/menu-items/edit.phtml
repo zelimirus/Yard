@@ -1,0 +1,41 @@
+<div class = "col-sm-12">
+	<div class="page-header">
+	    <h1>
+	        Edit menu item
+	    </h1>
+	</div>
+	<div class="col-sm-9">
+		<div class = "col-xs-7">
+			<?php echo $this->form; ?>
+		</div>
+		<div class = "col-xs-2">
+			<!-- image upload -->
+			<div class="panel panel-primary icon-selector" data-collapsed="0">
+				<div class="panel-heading">
+					<div class="panel-title">
+						Icon
+					</div>
+				</div>
+				<div class="panel-body upload-icon">
+					<a href="#" class="btn btn-default" onclick="showIconModal();" >
+						<span>Choose icon </span>
+					</a>
+					<div class="preview">
+						<i class="<?php echo $this->existing->icon;?> icon-large"></i>
+						<div class="close">
+							<a class="remove" href="javascript:undefined;" onClick="removeIcon()"><span class="glyphicon glyphicon-remove"></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+<div class="clear"></div>
+<script>
+    function showIconModal(){
+        $('#icons-modal').modal('show');
+    }
+    <?php if($this->existing->icon){?>
+    	$('.preview').css('display','block');
+    <?php }?>
+</script>

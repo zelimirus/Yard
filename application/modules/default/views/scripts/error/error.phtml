@@ -1,0 +1,8 @@
+<h2><?php echo $this->message?></h2>
+
+<div class="alert alert-info">
+    <br/>
+    <b>Message:</b> 
+	<?php if(is_object($this->exception)) echo $this->exception->getMessage();?>
+    <br/><br/>
+</div>

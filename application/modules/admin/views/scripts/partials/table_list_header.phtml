@@ -1,0 +1,44 @@
+<thead>
+	<tr>
+	<?php
+	$urlParams = array();
+	foreach(Zend_Controller_Front::getInstance()->getRequest()->getParams() as $urlParamsKey => $urlParamsVal){
+		if(!in_array($urlParamsKey, array('sort_by', 'sort_type'))){
+			$urlParams[$urlParamsKey] = $urlParamsVal;
+		}
+	}
+
+	foreach($this->headers as $header){
+		if($header[0] == ''){
+			if($header[2] > 0){
+				echo "<th width='".$header[2]."'>".$header[1]."</th>";
+			}
+			else{
+				echo "<th>".$header[1]."</th>";
+			}
+		}
+		else{
+			$currentSortBy	 = Zend_Controller_Front::getInstance()->getRequest()->getParam('sort_by');
+			$currentSortType = Zend_Controller_Front::getInstance()->getRequest()->getParam('sort_type');
+
+			$sortBy		 = $header[0];
+			$sortType	 = 'asc';
+			$class		 = '';
+			if(($currentSortBy == $header[0]) && ($currentSortType == 'asc')){
+				$sortType	 = 'desc';
+				$class		 = 'asc';
+			}
+			if(($currentSortBy == $header[0]) && ($currentSortType == 'desc')){
+				$class = 'desc';
+			}
+			if($header[2] > 0){
+				echo "<th width='".$header[2]."'><a class='".$class."' href='".$this->url(array_merge($urlParams, array('sort_by' => $sortBy, 'sort_type' => $sortType)))."'>".$header[1]."</a></th>";
+			}
+			else{
+				echo "<th><a class='".$class."' href='".$this->url(array_merge($urlParams, array('sort_by' => $sortBy, 'sort_type' => $sortType)))."'>".$header[1]."</a></th>";
+			}
+		}
+	}
+	?>
+	</tr>
+</thead>

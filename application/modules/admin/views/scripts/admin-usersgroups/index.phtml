@@ -1,0 +1,91 @@
+<div class="page-header">
+	<h3>Usersgroups
+		<small><p>Overview of usersgroups. Groups are assigned specific access privileges.</p></small>
+	</h3>
+</div>
+<div>
+	<a href="<?php echo $this->url(array('module' => 'admin', 'controller' => 'admin-usersgroups', 'action' => 'new'), 'default', true);?>"
+		class="btn btn-info pull-right left-05"> <i class="glyphicon glyphicon-plus"></i>Create new usersgroup
+	</a>
+</div>
+<br/><br/>
+<?php if(count($this->paginator)):?>
+<table class="table table-striped table-hover table-bordered">
+<?php echo $this->partial('partials/table_list_header.phtml', 'admin', array('headers' => $this->header));?>
+	<tbody>
+	<?php foreach($this->paginator as $object):?>
+	<?php $edit_url 	= $this->url(array('module' => 'admin', 'controller' => 'admin-usersgroups', 'action' => 'edit', 'id' => $object->id, 'page' => $this->page), 'default', true);?>
+	<?php $delete_url	= $this->url(array('module' => 'admin', 'controller' => 'admin-usersgroups', 'action' => 'delete', 'id' => $object->id, 'page' => $this->page), 'default', true);?>
+	<?php $privilages	= $this->url(array('module' => 'admin', 'controller' => 'admin-usersgroups', 'action' => 'privileges', 'id' => $object->id, 'page' => $this->page), 'default', true);?>
+		<tr>
+			<td><?php echo $object->id;?></td>
+			<td><?php echo $object->name;?></td>
+			<td>
+				<div class="btn-group">
+					<a onclick="viewGroup(<?php echo $object->id;?>); return false;" href="#" class="btn"> <i class="glyphicon glyphicon-eye-open"	data-original-title="View Details" 
+						onmouseover="$(this).tooltip('show');" rel="tooltip"></i> 
+					</a> 
+					<a href="<?php echo $edit_url;?>" class="btn"> <i class="glyphicon glyphicon-edit" data-original-title="Edit Informations" onmouseover="$(this).tooltip('show');" rel="tooltip"></i> 
+					</a>
+					<a href="<?php echo $privilages;?>" class="btn"> <i class="glyphicon glyphicon-cog" data-original-title="Special Privileges" onmouseover="$(this).tooltip('show');" rel="tooltip"></i> 
+					</a> 
+					<a class="btn" id="<?php echo $object->id;?>" href="#" onclick='bootbox.confirm("Are you sure?<br/><br/>", function(result){deleteHref(result, "<?php echo $delete_url;?>")});return false;'>
+						<i rel="tooltip" onmouseover="$(this).tooltip('show');" data-original-title="Delete Data" class="glyphicon glyphicon-trash"></i>
+					</a>
+				</div>
+			</td>
+		</tr>
+		<?php endforeach;?>
+	</tbody>
+</table>
+		<?php echo $this->paginationControl($this->paginator, 'Sliding', '/partials/pagination_control.phtml');?>
+		<?php else:?>
+		<div class="alert alert-info">
+			<h3>No records found.</h3>
+		</div>
+		<?php endif;?>
+
+<script type="text/javascript">
+	/**
+	 * Get one user info and show it in modal box
+	 */
+	function viewGroup(id){
+		jQuery.ajax({
+			url: "<?php echo $this->baseUrl('/admin/admin-usersgroups/show');?>",
+			type: 'POST',
+			data: {
+				id: id
+			},
+			dataType: "json",
+			success: function(result){
+				var id; var name; var html = '';
+				
+				html += "<table width='100%'>";
+				html += "<tr>";
+				html += "<td><b>Resource name: </b></td>";
+				html += "<td><b>Resource description: </b></td>";
+				html += "<td><b>Special privileges: </b></td>";
+				html += "<td><b>Allowed: </b></td>";
+				html += "</tr>";
+				
+				jQuery.each(result, function(i, val) {
+					if(val.is_allowed) var allowed = "<td style='color:green;'>Allowed</td>";
+					else var allowed = "<td> </td>";
+				
+					id    = val.id;
+					name  = val.name;
+					html += "<tr>"
+					html += "<td>";if(val.r_name){html += val.r_name;} html +='</td>';
+					html += "<td>";if(val.description){html += val.description;} html +='</td>';
+					html += "<td>";if(val.action){html += val.action;} html +='</td>';
+					html += allowed;
+					html += "</tr>"
+				});
+				html += "</table>"
+				
+				var html = "Usersgroup name: <b>"+name+"("+id+")</b><br/><br/>"+html;
+				bootbox.alert(html);
+			}
+		});
+	}
+</script>

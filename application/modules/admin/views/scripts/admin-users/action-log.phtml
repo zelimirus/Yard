@@ -1,0 +1,31 @@
+<div class="page-header">
+	<h3>
+		Adminusers actions
+		<small><p>Overview of actions, such as adding, editing, deleting</p></small>
+	</h3>
+</div>
+<div><?php echo $this->form;?></div><br/><br/>
+
+<?php if(count($this->paginator)):?>
+    <table class="table table-striped table-hover table-bordered">
+		<?php echo $this->partial("partials/table_list_header.phtml", "admin", array("headers" => $this->header));?>
+		<tbody>
+				<?php foreach($this->paginator as $admin_action){?>
+				<tr>
+					<td><?php echo $admin_action['email'];?></td>
+					<td><?php echo $admin_action['role_name'];?></td>
+					<td><?php echo date("d.m.Y H:i:s", strtotime($admin_action['date']));?>
+					</td>
+					<td><?php echo $admin_action['action'];?></td>
+					<td><?php echo $admin_action['affected_table'];?></td>
+					<td><?php echo $admin_action['params'];?></td>
+				</tr>
+			<?php }?>
+		</tbody>
+	</table>
+	<?php echo $this->paginationControl($this->paginator, "Sliding", "/partials/pagination_control.phtml");?>
+<?php else:?>
+	<div class="alert alert-info">
+		<h3>No records found.</h3>
+	</div>
+<?php endif;?>

@@ -1,0 +1,84 @@
+<?php
+$m 		= Zend_Controller_Front::getInstance()->getRequest()->getModuleName();
+$c 		= Zend_Controller_Front::getInstance()->getRequest()->getControllerName();
+$a 		= Zend_Controller_Front::getInstance()->getRequest()->getActionName();
+$user 	= Zend_Auth::getInstance()->getIdentity();
+$home 	= $this->url(array('module' => 'admin'), 'default', true);
+$logout = $this->url(array('module' => 'admin', 'controller' => 'auth', 'action' => 'logout'), 'default', true);
+$edit 	= $this->url(array('module' => 'admin', 'controller' => 'admin-users', 'action' => 'edit', 'id' => (isset($user->id) ? $user->id : 0), 'page' => '1'), 'default', true);
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <title><?php echo Zend_Registry::get('app_name'); ?></title>
+        <?php include 'theme_head_links.phtml'; ?>  
+    </head>
+    <body data-twttr-rendered="true" class="page-body" data-url="">  
+		<script type="text/javascript" id="runscript">
+			var BASE_URL = '<?php echo $this->baseUrl(); ?>';
+		</script>
+        <div class="page-container">
+            <div class="sidebar-menu">
+                <header class="logo-env">
+                   <div class="logo"></div>
+                        <div class="sidebar-collapse">
+                            <a href="#" class="sidebar-collapse-icon with-animation">
+                                <i class="entypo-menu"></i>
+                            </a>
+                        </div>
+                    <div class="sidebar-mobile-menu visible-xs">
+                            <a href="#" class="with-animation">
+                                <i class="entypo-menu"></i>
+                            </a>
+                    </div>
+                </header>
+
+                <ul id="main-menu" class="multiple-expanded auto-inherit-active-class">   
+                      
+                    <?php
+                    foreach ($this->menu_items as $item){ $class_active = ($m == $item['module'] && $c == $item['controller'] && $a == $item['action']) ? 'active' : '';?>
+                        <li class="<?php echo $class_actdive; ?>">
+                            <a href="<?php echo $this->url($item['url'],'default', true); ?>">
+                                <i class="entypo-window"></i><span><?php echo $item['title']?></span>
+                            </a>
+                            <ul>
+                            <?php foreach ($item['child'] as $child){ ?>
+                                <li>
+                                    <a href="<?php echo $this->url($child['url'],'default', true);; ?>">
+                                        <i class="<?php echo $child['icon']; ?>"></i> <span><?php echo $child['title']; ?></span>
+                                    </a>
+                                </li>
+                            <?php } ?>
+                            </ul>
+                        </li>
+                        <?php } ?>  
+                          <li class="<?php echo $class_actdive; ?>">
+                            <a href="<?php echo $this->url($item['url'],'default', true); ?>">
+                                <i class="entypo-user"></i><span><?php if(isset($user->id)){echo (ucfirst($user->first_name).' '.ucfirst($user->last_name)); }?></span>
+                            </a>
+                            <ul>
+                                <li>
+                                     <a href="<?php echo $edit; ?>"><span>Edit Profile</a></span>    
+                                </li>
+                                 <li>
+                                    <a href="<?php echo $logout; ?>"><span> Log Out</a></span>
+                                </li> 
+                            </ul>
+                        </li>
+                </ul>          
+            </div>
+            <div class="main-content" style="z-index: 0;">
+                <div class="" role="main">
+                    <div id="flash-messanger"><?php echo $this->flashMessenger(); ?></div>
+                    <!-- content of view.phtml files -->
+                    <?php echo $this->layout()->content; ?>
+                </div>
+                <footer class="main">  
+                </footer>
+            </div>
+        </div>
+        <?php include 'theme_bottom_links.phtml'; ?>   
+    </body>
+</html>

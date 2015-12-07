@@ -1,0 +1,9 @@
+.project
+.zfproject.xml
+public/uploads/
+nbproject/
+public/node_modules/
+.buildpath
+.settings
+error.log
+public/.htaccess

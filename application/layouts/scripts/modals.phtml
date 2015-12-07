@@ -1,0 +1,25 @@
+<div class="modal fade" id="icons-modal" data-backdrop="static">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 id="modal-comment-reply-header"></h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group no-margin">
+							<h3>Choose icon for this menu item:</h3>
+							<br/>
+							<?php foreach($this->menu_items_icons as $one_icon){?>
+							<a onclick="addIcon('<?php echo $one_icon['id'];?>', '<?php echo $one_icon['icon'];?>')">
+								<span class="<?php echo $one_icon['icon']?> icon-medium"></span>
+							</a>
+							<?php }?>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

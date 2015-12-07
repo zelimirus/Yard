@@ -1,0 +1,4551 @@
+@charset "UTF-8";* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html,body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+   
+    background-size: 1562px 1029px;
+    background-image: url(../../images/sr_rs/1170/background.jpg);
+    background-repeat: repeat;
+    width: 100% !important;
+    position: absolute;
+    height: 100%;
+    overflow-x:hidden;
+}
+
+.pluginSkinLight pluginFontHelvetica {
+    float: right
+}
+
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #000 url(/images/loader.gif) no-repeat center center
+}
+
+#content {
+    position: relative;
+    /*width: 100%;*/
+    margin-bottom: 0;
+    margin-top: 187px;
+    clear: both;
+    min-height: 730px;
+    margin-left: -113px;
+    z-index: 0;
+    overflow-x: hidden;
+}
+
+.index{
+    height: 800px !important;
+}
+
+.about{
+    height: 800px !important;
+}
+
+.contact{
+    height: 1200px !important;
+}
+
+.menu{
+    height: 900px !important;
+}
+
+.gallery{
+    height: 850px !important;
+}
+
+.rooms{
+    height: 950px !important;
+}
+
+.full {
+    display: none
+}
+
+    .facebook-class {
+        position: absolute !important;
+        top: 51%;
+        left: 9%;
+}
+
+.begin-space {
+    margin-left: 40px
+}
+
+@media only screen and (min-width: 1625px) {
+    #content {
+        padding-left:219px
+    }
+}
+
+a {
+    color: #005826
+}
+
+.green {
+    color: #9c0202
+}
+
+@media only screen and (max-width: 750px) {
+    #content {
+        min-height:0
+    }
+
+    .full {
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.5);
+        position: fixed;
+        top: 0;
+        z-index: 3;
+        display: none
+    }
+}
+
+@font-face {
+    font-family: regular;
+    src: url(../../fonts/regular.ttf)
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    height: 212px
+}
+
+#header-wraper {
+    position: relative;
+    left: 45%;
+    margin-left: -820px;
+    height: 212px;
+    width: 1592px
+}
+
+#dropdown {
+    display: none
+}
+
+.nav {
+    display: none
+}
+
+@media only screen and (min-width: 1625px) {
+    #header-wraper {
+        position:relative;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
+#tablecloth-1 {
+    background-image: url(../../images/en_gb/1170/tablecloth-1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 1150px;
+    height: 212px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    pointer-events: none
+}
+
+#gradient {
+    background-image: url(../../images/en_gb/1170/gradient.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 1170px;
+    height: 216px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    opacity: .2;
+    pointer-events: none
+}
+
+#blackgoard-logo {
+    background-image: url(../../images/en_gb/1170/blackboard-logo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 345px;
+    height: 190px;
+    position: absolute;
+    top: 0;
+    left: 244px;
+    z-index: 3
+}
+
+#persil {
+    background-image: url(../../images/en_gb/1170/persil.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 245px;
+    height: 294px;
+    position: absolute;
+    top: 0;
+    left: 133px;
+    z-index: 4;
+    pointer-events: none
+}
+
+#coffe {
+    background-image: url(../../images/en_gb/1170/coffe.png);
+    width: 260px;
+    height: 373px;
+    position: absolute;
+    left: 61px;
+    z-index: 4;
+    left: 100px;
+    pointer-events: none
+}
+
+#zupska-avlija-logo-header {
+    background-image: url(../../images/en_gb/1170/zupska-avlija-logo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 196px;
+    height: 122px;
+    position: absolute;
+    top: 9px;
+    left: 323px;
+    z-index: 3
+}
+
+#tablecloth-2 {
+    background-image: url(../../images/en_gb/1170/tablecloth-2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 475px;
+    height: 73px;
+    position: absolute;
+    top: 0;
+    left: 1122px;
+    z-index: 3;
+    pointer-events: none
+}
+
+#rooms {
+    background-image: url(../../images/en_gb/1170/smestaj.png);
+    background-size: 208% 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 140px;
+    height: 128px;
+    position: absolute;
+    top: 0;
+    left: 1312px;
+    z-index: 3;
+    color: #A5BA8B;
+}
+
+#rooms:hover {
+    background-position: -152px 0
+}
+
+#rooms:hover #rooms-text {
+    color: #DCC326
+}
+
+#rooms-text {
+    position: absolute;
+    top: 77px;
+    left: 39px;
+    text-decoration: none
+}
+
+#rooms2 {
+    background-image: url(../../images/en_gb/1170/falenta.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 140px;
+    height: 162px;
+    position: absolute;
+    top: 0;
+    left: 1312px;
+    z-index: 3;
+    color: #fff
+}
+
+#rooms2 #rooms-text {
+    color: #45542A;
+    left: 38px
+}
+
+#about {
+    background-image: url(../../images/en_gb/1170/malo-o-nama.png);
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    background-position: 0 -150px;
+    width: 146px;
+    height: 158px;
+    position: absolute;
+    top: 0;
+    left: 633px;
+    z-index: 1
+}
+
+#about:hover {
+    background-position: 0 16px
+}
+
+#contact {
+    background-image: url(../../images/en_gb/1170/kontakt.png);
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    background-position: 0 -160px;
+    width: 149px;
+    height: 164px;
+    position: absolute;
+    top: 0;
+    left: 1090px;
+    z-index: 1
+}
+
+#contact:hover {
+    background-position: 0 10px !important;
+}
+
+#menu {
+    background-image: url(../../images/en_gb/1170/index-jelovnik.png);
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    background-position: 0 -169px;
+    width: 163px;
+    height: 172px;
+    position: absolute;
+    top: 0;
+    left: 780px;
+    z-index: 1
+}
+
+#menu:hover {
+    background-position: 0 7px;
+}
+
+#gallery {
+    background-image: url(../../images/en_gb/1170/foto-galerija.png);
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    background-position: 0 -169px;
+    width: 153px;
+    height: 166px;
+    position: absolute;
+    top: 0;
+    left: 940px;
+    z-index: 1
+}
+
+#gallery:hover {
+    background-position: 0 7.1px
+}
+
+#english-symbol {
+    background-image: url(../../images/en_gb/1170/english-symbol.png);
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    background-position: 0 -23px;
+    width: 66px;
+    height: 23.5px;
+    position: absolute;
+    top: 20px;
+    left: 1205px;
+    z-index: 3
+}
+
+#english-symbol:hover {
+    background-position: 0 0
+}
+
+@-moz-document url-prefix() {
+    #rooms:hover {
+        background-position: -151px 0
+    }
+
+    #contact {
+        background-image: url(../../images/en_gb/1170/kontakt.png);
+        background-size: 100% 200%;
+        background-repeat: no-repeat;
+        background-position: 0 -175px;
+        width: 149px;
+        height: 171px;
+        position: absolute;
+        top: 0;
+        left: 1090px;
+        z-index: 1
+    }
+
+    #contact:hover {
+        background-position: 0 2.7px !important;
+    }
+
+    #rooms-text {
+        position: absolute;
+        top: 77px;
+        left: 36px;
+        text-decoration: none
+    }
+
+    a {
+        text-decoration: none
+    }
+
+    #rooms2 {
+        background-image: url(../../images/en_gb/1170/falenta.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        width: 140px;
+        height: 162px;
+        position: absolute;
+        top: 0;
+        left: 1312px;
+        z-index: 3;
+        color: #fff
+    }
+
+    #rooms2 #rooms-text {
+        color: #45542A;
+        left: 35.5px
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #rooms:hover {
+        background-position: -151px 0
+    }
+
+    #menu:hover {
+        background-position: 0 7.3px
+    }
+
+    #contact:hover {
+        background-position: 0 2.8px
+    }
+}
+
+@media only screen and (max-width: 1170px) {
+    #blackgoard-logo {
+        background-image:url(../../images/en_gb/970/blackboard.png);
+        left: 292px;
+        width: 269px;
+        height: 173px
+    }
+
+    #tablecloth-2 {
+        left: 951px
+    }
+
+    #english-symbol {
+        left: 1035px
+    }
+
+    #rooms {
+        left: 1145px
+    }
+
+    #zupska-avlija-logo-header {
+        top: 11px;
+        left: 327px
+    }
+
+    #about {
+        left: 553px
+    }
+
+    #menu {
+        left: 696px
+    }
+
+    #gallery {
+        left: 853px
+    }
+
+    #contact {
+        left: 995px
+    }
+
+    #header-wraper {
+        margin-left: -754px
+    }
+
+    #rooms2 {
+        left: 1145px
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    #header-wraper {
+        margin-left:-584px
+    }
+
+    #blackgoard-logo {
+        background-image: url(../../images/en_gb/750/blackboard-logo.png);
+        width: 223px;
+        height: 143px;
+        left: 226px
+    }
+
+    #tablecloth-1 {
+        background-image: url(../../images/en_gb/750/tablecloth-1.png);
+        width: 798px;
+        height: 153px
+    }
+
+    #gradient {
+        background-image: url(../../images/en_gb/750/gradient.png);
+        width: 794px;
+        height: 147px
+    }
+
+    #persil {
+        background-image: url(../../images/en_gb/750/persil.png);
+        width: 183px;
+        height: 219px;
+        left: 117px
+    }
+
+    #blackgoard-logo {
+        background-image: url(../../images/en_gb/750/blackboard-logo.png);
+        width: 223px;
+        height: 143px
+    }
+
+    #zupska-avlija-logo-header {
+        background-image: url(../../images/en_gb/750/zupska-avlija-logo.png);
+        width: 156px;
+        height: 97px;
+        left: 256px;
+        top: 3px
+    }
+
+    #tablecloth-2 {
+        background-image: url(../../images/en_gb/750/tablecloth-2.png);
+        width: 445px;
+        height: 68px;
+        left: 692px
+    }
+
+    #rooms {
+        background-image: url(../../images/en_gb/750/smestaj.png);
+        width: 117px;
+        height: 100px;
+        left: 882px
+    }
+
+    #rooms2 {
+        background-image: url(../../images/en_gb/750/falenta.png);
+        width: 109px;
+        height: 126px;
+        left: 882px
+    }
+
+    #rooms2 #rooms-text {
+        left: 24px
+    }
+
+    #rooms:hover {
+        background-position: -128px 0
+    }
+
+    #about:hover {
+        background-position: 0 15px
+    }
+
+    #contact:hover {
+        background-position: 0 8px!important;
+    }
+
+    #menu:hover {
+        background-position: 0 0
+    }
+
+    #gallery:hover {
+        background-position: 0 0
+    }
+
+    #english-symbol:hover {
+        background-position: 0 2px
+    }
+
+    #rooms-text {
+        top: 61px;
+        left: 28px
+    }
+
+    #about {
+        background-image: url(../../images/en_gb/750/malo-o-nama.png);
+        width: 125px;
+        height: 155px;
+        left: 420px;
+        top: -8px
+    }
+
+    #contact {
+        background-image: url(../../images/en_gb/750/kontakt.png);
+        width: 126px;
+        height: 155px;
+        left: 765px;
+        top: -18px
+    }
+
+    #menu {
+        background-image: url(../../images/en_gb/750/index-jelovnik.png);
+        width: 126px;
+        height: 155px;
+        left: 537px
+    }
+
+    #gallery {
+        background-image: url(../../images/en_gb/750/foto-galerija.png);
+        width: 125px;
+        height: 157px;
+        left: 654px
+    }
+
+    #english-symbol {
+        background-image: url(../../images/en_gb/1170/english-symbol.png);
+        background-position: 0 -23px;
+        width: 62px;
+        height: 23px;
+        left: 769px
+    }
+
+    #coffe {
+        background-image: url(../../images/en_gb/750/coffe.png);
+        width: 214px;
+        height: 306px;
+        position: absolute;
+        left: 73px;
+        z-index: 4;
+        pointer-events: none
+    }
+}
+
+@-moz-document url-prefix() {
+    @media (max-width: 970px) {
+        #rooms-text {
+            top:57px;
+            left: 26px
+        }
+
+        #contact {
+            left: 765px;
+            top: 0
+        }
+
+        #rooms:hover {
+            background-position: -128px 0
+        }
+
+        #about:hover {
+            background-position: 0 15px
+        }
+
+        #contact:hover {
+            background-position: 0 -7px !important;
+        }
+
+        #menu:hover {
+            background-position: 0 -1px
+        }
+
+        #gallery:hover {
+            background-position: 0 -1px
+        }
+
+        #english-symbol:hover {
+            background-position: 0px -0.2px;
+        }
+
+        #rooms2 #rooms-text {
+            left: 21px
+        }
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #header-wraper {
+        position:relative;
+        left: 60%;
+        margin-left: -362px;
+        height: 212px;
+        width: 620px
+    }
+
+    #tablecloth-1 {
+        background-image: url(../../images/en_gb/480/krpa.png);
+        width: 614px;
+        height: 152px;
+        position: absolute;
+        left: 0
+    }
+
+    #blackgoard-logo {
+        background-image: url(../../images/en_gb/480/board.png);
+        width: 220px;
+        height: 143px;
+        left: 94px
+    }
+
+    #gradient {
+        display: none
+    }
+
+    #persil {
+        background-image: url(../../images/en_gb/480/pesun.png);
+        width: 167px;
+        height: 201px;
+        left: -11px
+    }
+
+    #coffe {
+        background-image: url(../../images/en_gb/480/kafa-zrno.png);
+        width: 277px;
+        height: 178px;
+        position: absolute;
+        left: 61px;
+        z-index: 4;
+        left: -40px;
+        pointer-events: none
+    }
+
+    #zupska-avlija-logo-header {
+        background-image: url(../../images/en_gb/480/logo-zupska-avlija.png);
+        width: 154px;
+        height: 91px;
+        left: 122px;
+        top: 9px
+    }
+
+    #tablecloth-2 {
+        display: none
+    }
+
+    #rooms {
+        display: none
+    }
+
+    #rooms2 {
+        display: none
+    }
+
+    #english-symbol {
+        background-image: url(../../images/en_gb/480/english.png);
+        background-size: 100% 200%;
+        background-position: 0px -18px;
+        width: 58px;
+        height: 18px;
+        left: 312px;
+        top: 11px
+    }
+
+    #english-symbol:hover {
+        background-position: 0px -18px;
+    }
+
+    #about {
+        display: none
+    }
+
+    #contact {
+        display: none
+    }
+
+    #menu {
+        display: none
+    }
+
+    #gallery {
+        display: none
+    }
+
+    #dropdown {
+        display: block;
+        background-image: url(../../images/en_gb/480/falenta.png);
+        background-size: 100% 200%;
+        background-position: 0 100%;
+        width: 97px;
+        height: 95px;
+        position: absolute;
+        top: -6px;
+        left: 456px;
+        z-index: 5
+    }
+
+    #dropdown:hover {
+        background-image: url(../../images/en_gb/480/falenta.png);
+        background-position: 0 0;
+        top: 0
+    }
+
+    .nav {
+        background-color: #005429;
+        width: 371px;
+        height: 883px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        color: #fff
+    }
+
+    .nav #background {
+        background-image: url(../../images/en_gb/480/heder-slika.jpg);
+        background-position: 0 0;
+        width: 371px;
+        height: 176px;
+        margin-bottom: 5px;
+        border-bottom: 0
+    }
+
+    .nav p {
+        display: block;
+        width: 100%;
+        height: 27px;
+        font-size: 13px;
+        text-align: left;
+        padding-top: 4px;
+        padding-left: 15px;
+        font-family: regular
+    }
+
+    .nav a {
+        display: block;
+        color: #000;
+        background-color: #FEFCF3;
+        width: 100%;
+        height: 59px;
+        border-bottom: solid #E1DECF 1px;
+        text-decoration: none;
+        margin-bottom: -18px;
+        text-align: left;
+        padding-top: 16px;
+        padding-left: 52px;
+        font-family: regular;
+        font-size: 20px
+    }
+
+    .nav h3 {
+        font-size: 11px;
+        padding-top: 23px;
+        text-align: center;
+        font-family: regular
+    }
+
+    .nav #nav-about {
+        background-image: url(../../images/en_gb/480/icon-malo-o-nama.png);
+        background-repeat: no-repeat;
+        background-position: 15px 50%
+    }
+
+    .nav #nav-contact {
+        background-image: url(../../images/en_gb/480/icon-kontakt.png);
+        background-repeat: no-repeat;
+        background-position: 15px 50%
+    }
+
+    .nav #nav-menu {
+        background-image: url(../../images/en_gb/480/icon-jelovnik.png);
+        background-repeat: no-repeat;
+        background-position: 15px 50%
+    }
+
+    .nav #nav-gallery {
+        background-image: url(../../images/en_gb/480/icon-foto-galerija.png);
+        background-repeat: no-repeat;
+        background-position: 15px 50%
+    }
+
+    .nav #nav-rooms {
+        background-image: url(../../images/en_gb/480/icon-smestaj.png);
+        background-repeat: no-repeat;
+        background-position: 15px 50%
+    }
+
+    .nav #nav-facebook {
+        background-image: url(../../images/en_gb/480/icon-fb.png);
+        background-repeat: no-repeat;
+        background-position: 15px 50%
+    }
+
+    .nav #nav-google {
+        background-image: url(../../images/en_gb/480/icon-google-plus.png);
+        background-repeat: no-repeat;
+        background-position: 15px 50%
+    }
+
+    .nav #nav-trip {
+        background-image: url(../../images/en_gb/480/icon-trip-adviror.png);
+        background-repeat: no-repeat;
+        background-position: 15px 50%
+    }
+
+    .nav #nav-google-map {
+        background-image: url(../../images/en_gb/480/icon-google-map.png);
+        background-repeat: no-repeat;
+        background-position: 15px 50%
+    }
+
+    .nav #nav-friend {
+        background-image: url(../../images/en_gb/480/icon-send-frends.png);
+        background-repeat: no-repeat;
+        background-position: 15px 50%
+    }
+}
+
+@font-face {
+    font-family: footer-title;
+    src: url(../../fonts/bold.ttf)
+}
+
+@font-face {
+    font-family: code;
+    src: url(../../fonts/code.ttf)
+}
+
+@font-face {
+    font-family: regular;
+    src: url(../../fonts/regular.ttf)
+}
+
+@font-face {
+    font-family: bold2;
+    src: url(../../fonts/bold2.ttf)
+}
+
+@font-face {
+    font-family: content;
+    src: url(../../fonts/passport.ttf)
+}
+
+@font-face {
+    font-family: journal;
+    src: url(../../fonts/journal.ttf)
+}
+
+#facebook-footer {
+    display: none
+}
+
+#footer {
+    background: transparent url(../../images/en_gb/1170/footer-background.png) repeat-x;
+    bottom: -63%;
+    left: 0;
+    width: 100%;
+    height: 335px;
+    z-index: 1
+}
+
+#footer .footer-wrap {
+    width: 1170px;
+    height: 335px;
+    margin: 0;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2
+}
+
+#footer .footer-wrap .footer-section1 {
+    width: 388px;
+    background: transparent url(../../images/en_gb/1170/vertical-line.png) no-repeat top right;
+    float: left;
+    height: 265px;
+    margin-top: 49px
+}
+
+#footer .footer-wrap .footer-section1 .footer-section1-right {
+    margin-top: 4px;
+    margin-bottom: 8px;
+    height: 20px;
+    width: 220px;
+    font-family: footer-title;
+    font-size: 24px
+}
+
+#footer .footer-wrap .footer-section1 .footer-section1-right>p>span {
+    color: #8B381C
+}
+
+#footer .footer-wrap .footer-section1 .social-network {
+    float: right;
+    margin-right: 124px;
+    margin-top: 23px;
+    height: 112px;
+    width: 343px
+}
+
+#footer .footer-wrap .footer-section1 .social-network1 {
+    background: transparent url(../../images/en_gb/1170/social-network.png) no-repeat top right;
+    background-size: 100% 100%;
+    float: right;
+    height: 95px;
+    width: 100px;
+    background-size: 256% auto;
+    background-position: -145px -97px;
+    margin-top: -9px
+}
+
+#footer .footer-wrap .footer-section1 .social-network1:hover {
+    background-position: -145px -3px
+}
+
+#footer .footer-wrap .footer-section1 .social-network2 {
+    background: transparent url(../../images/en_gb/1170/social-network.png) no-repeat top right;
+    float: right;
+    height: 72px;
+    width: 62px;
+    margin-left: 21px;
+    margin-right: 4px;
+    background-size: 411%;
+    background-position: -82px -112px
+}
+
+#footer .footer-wrap .footer-section1 .social-network2:hover {
+    background-position: -82px -18px
+}
+
+#footer .footer-wrap .footer-section1 .social-network3 {
+    background: transparent url(../../images/en_gb/1170/social-network.png) no-repeat top right;
+    float: right;
+    height: 72px;
+    width: 62px;
+    background-size: 411%;
+    background-position: 0 -112px
+}
+
+#footer .footer-wrap .footer-section1 .social-network3:hover {
+    background-position: 0 -18px
+}
+
+#footer .footer-wrap .footer-section1 .horisontal-wrape {
+    width: 360px;
+    margin-right: 29px;
+    height: 80px;
+    float: right;
+    margin-top: -23px
+}
+
+#footer .footer-wrap .footer-section1 .horisontal-line {
+    background: transparent url(../../images/en_gb/1170/okvir-1170px.png) no-repeat top right;
+    background-size: 100% 100%;
+    width: 347px;
+    height: 91px;
+    padding-left: 27px;
+    padding-top: 15px;
+    font-size: 10px
+}
+
+#footer .footer-wrap .footer-section1 .zupska-avlija-logo-footer {
+    background: transparent url(../../images/en_gb/1170/numero.png) no-repeat top left;
+    background-size: 100% 100%;
+    float: right;
+    width: 71px;
+    height: 43px;
+    margin-top: 9px;
+    margin-right: 50px
+}
+
+#footer .footer-wrap .footer-section1 .footer-trip {
+    position: absolute;
+    top: 62%;
+    left: 2.5%;
+    width: 220px;
+    height: 53px
+}
+
+#footer .footer-wrap .footer-section1 .footer-span1 {
+    position: absolute;
+    bottom: 12px;
+    left: 16px;
+    font-family: regular;
+    font-size: 11px
+}
+
+#footer .footer-wrap .footer-section1 .footer-span2 {
+    color: #9c0202;
+    position: absolute;
+    bottom: 11px;
+    left: 113px;
+    padding-left: 0;
+    font-family: regular;
+    font-size: 13px
+}
+
+#footer .footer-wrap .footer-section1 .footer-span3 {
+    position: absolute;
+    bottom: 29px;
+    left: 16px;
+    font-family: regular;
+    font-size: 11px
+}
+
+#footer .footer-wrap .footer-section2 {
+    background: transparent url(../../images/en_gb/1170/vertical-line.png) no-repeat top right;
+    height: 265px;
+    float: left;
+    margin-top: 49px;
+    width: 417px
+}
+
+#footer .footer-wrap .footer-section2 #qr-code-srb {
+    background: transparent url(../../images/en_gb/1170/qr-code-srb.png) no-repeat bottom right;
+    background-size: 100% 100%;
+    width: 139px;
+    height: 138px;
+    float: right;
+    background-size: 100%;
+    margin-right: -122px;
+    margin-top: 108px
+}
+
+#footer .footer-wrap .footer-section2 #qr-code-text {
+    margin-top: 28px;
+    width: 135px;
+    float: right;
+    margin-right: 44px;
+    font-family: regular;
+    font-size: 23px;
+}
+
+#footer .footer-wrap .footer-section2 span {
+    font-size: 75px;
+    position: absolute;
+    top: 17%;
+    left: 62%;
+    font-family: journal
+}
+
+#footer .footer-wrap .footer-section2 .minus-margin {
+    margin-bottom: -7px
+}
+
+#footer .footer-wrap .footer-section2 .font26px {
+    font-size: 25px;
+    width: 200px
+}
+
+#footer .footer-wrap .footer-section2 .postion {
+    font-size: 25px
+}
+
+#footer .footer-wrap .footer-section2 #symbol-qr {
+    background: transparent url(../../images/en_gb/1170/symbol-qr.png) no-repeat top left;
+    background-size: 100% 100%;
+    margin-left: 69px;
+    width: 95px;
+    height: 149px;
+    margin-top: 16px
+}
+
+#footer .footer-wrap .footer-section2 #symbol-text {
+    text-align: center!important;
+    width: 145px;
+    margin-left: 26px;
+    margin-top: 5px;
+    font-family: bold2;
+    font-size: 17px
+}
+
+#footer .footer-wrap .footer-section2 #symbol-text .location {
+    display: none
+}
+
+#footer .footer-wrap .footer-section2 #symbol-text>.green {
+    font-size: 30px;
+    font-family: code
+}
+
+#footer .footer-wrap .footer-section2 #symbol-text>p {
+    margin-bottom: -7px;
+    font-size: 20px
+}
+
+#footer .footer-wrap .footer-section2 .ninethine-px {
+    font-size: 24px!important;
+    line-height: 29px
+}
+
+#footer .footer-wrap .footer-section3 {
+    height: 265px;
+    width: 335px;
+    float: left;
+    margin-top: 49px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap {
+    float: right;
+    width: 311px;
+    height: 240px;
+    padding-top: 20px;
+    margin-top: 32px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols {
+    background: transparent url(../../images/en_gb/1170/segments-symbols.png) no-repeat;
+    float: left;
+    width: 62px;
+    height: 69px;
+    margin: 0 9px;
+    background-position: 0 -213px;
+    background-size: 496%
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols:hover {
+    background-position: 0 1px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-2 {
+    background-position: -80px -213px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-2:hover {
+    background-position: -80px 1px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-3 {
+    background-position: -161px -213px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-3:hover {
+    background-position: -161px 1px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-4 {
+    background-position: -241px -213px;
+    margin-right: 0
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-4:hover {
+    background-position: -241px 1px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-5 {
+    background-position: 0 -281px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-5:hover {
+    background-position: 0 -68px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-6 {
+    background-position: -80px -281px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-6:hover {
+    background-position: -80px -68px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-7 {
+    background-position: -161px -281px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-7:hover {
+    background-position: -161px -68px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-8 {
+    background-position: -241px -281px;
+    margin-right: 0
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-8:hover {
+    background-position: -241px -68px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-9 {
+    background-position: 0 -351px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-9:hover {
+    background-position: 0 -137px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-10 {
+    background-position: -80px -351px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-10:hover {
+    background-position: -80px -137px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-11 {
+    background-position: -161px -351px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-11:hover {
+    background-position: -161px -137px
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-12 {
+    background-position: -241px -351px;
+    margin-right: 0
+}
+
+#footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-12:hover {
+    background-position: -241px -137px
+}
+
+#footer .footer-wrap .footer-section3 {
+    background: 0
+}
+
+#footer .footer-wrap .symbols-top {
+    position: absolute;
+    margin-left: 54px;
+    padding: 3px 50px;
+    font-family: footer-title;
+    font-size: 24px
+}
+
+@media only screen and (max-width: 1170px) {
+    #footer .footer-wrap {
+        width:975px
+    }
+
+    #footer .footer-wrap .footer-section1 {
+        width: 316px;
+        height: 265px;
+        margin-top: 49px
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-section1-right {
+        margin-top: 12px;
+        height: 23px;
+        width: 220px
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network {
+        margin-right: 49px;
+        margin-top: 16px;
+        height: 112px;
+        width: 343px
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network1 {
+        background: transparent url(../../images/en_gb/1170/social-network.png) no-repeat top right;
+        background-size: 100% 100%;
+        float: right;
+        height: 95px;
+        width: 100px;
+        background-size: 256% auto;
+        background-position: -145px -97px;
+        margin-top: -9px
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network1:hover {
+        background-position: -145px -2px
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network2 {
+        background: transparent url(../../images/en_gb/1170/social-network.png) no-repeat top right;
+        float: right;
+        height: 72px;
+        width: 62px;
+        margin-left: 24px;
+        margin-right: 8px;
+        background-size: 411%;
+        background-position: -82px -112px
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network2:hover {
+        background-position: -82px -18px
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network3 {
+        background: transparent url(../../images/en_gb/1170/social-network.png) no-repeat top right;
+        float: right;
+        height: 72px;
+        width: 62px;
+        background-size: 411%;
+        background-position: 0 -112px
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network3:hover {
+        background-position: 0 -18px
+    }
+
+    #footer .footer-wrap .footer-section1 .horisontal-wrape {
+        width: 299px;
+        margin-right: 22px;
+        height: 80px;
+        float: right;
+        margin-top: -19px
+    }
+
+    #footer .footer-wrap .footer-section1 .horisontal-line {
+        background: transparent url(../../images/en_gb/970/okvir-970.png) no-repeat top right;
+        background-size: 100% 100%;
+        width: 294px;
+        height: 90px;
+        padding-left: 27px;
+        padding-top: 15px;
+        font-size: 10px
+    }
+
+    #footer .footer-wrap .footer-section1 .zupska-avlija-logo-footer {
+        background: transparent url(../../images/en_gb/1170/numero.png) no-repeat top left;
+        background-size: 100% 100%;
+        width: 71px;
+        height: 43px;
+        margin-top: 10px;
+        float: right;
+        margin-right: 0
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-trip {
+        position: absolute;
+        top: 64.5%;
+        left: 2.5%;
+        width: 160px;
+        height: 53px
+    }
+
+    #footer .footer-wrap .footer-section1 .wrapperLink img {
+        width: 178px
+    }
+
+    #footer .footer-wrap .footer-section1 .wrapperLink .rightSide {
+        left: 52px
+    }
+
+    #footer .footer-wrap .footer-section1 .wrapperLink .image img {
+        width: 121px
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-span1 {
+        font-size: 11px
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-span2 {
+        font-size: 11px;
+        bottom: 12px
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-span3 {
+        font-size: 11px
+    }
+
+    #footer .footer-wrap .footer-section2 {
+        background: transparent url(../../images/en_gb/1170/vertical-line.png) no-repeat top right;
+        height: 265px;
+        float: left;
+        margin-top: 49px;
+        width: 326px
+    }
+
+    #footer .footer-wrap .footer-section2 #qr-code-srb {
+        background: transparent url(../../images/en_gb/1170/qr-code-srb.png) no-repeat bottom right;
+        background-size: 100% 100%;
+        width: 139px;
+        height: 138px;
+        float: right;
+        background-size: 100%;
+        margin-right: -138px;
+        margin-top: 108px
+    }
+
+    #footer .footer-wrap .footer-section2 #qr-code-text {
+        margin-top: 28px;
+        width: 114px;
+        float: right;
+        margin-right: 54px;
+        font-size: 21px
+    }
+
+    #footer .footer-wrap .footer-section2 #symbol-qr {
+        background: transparent url(../../images/en_gb/1170/symbol-qr.png) no-repeat top left;
+        background-size: 100% 100%;
+        margin-left: 51px;
+        width: 95px;
+        height: 149px;
+        margin-top: 14px
+    }
+
+    #footer .footer-wrap .footer-section2 #symbol-text {
+        width: 148px;
+        margin-left: 2px
+    }
+
+    #footer .footer-wrap .footer-section3 {
+        height: 265px;
+        width: 303px;
+        float: left;
+        margin-top: 49px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap {
+        float: right;
+        width: 311px;
+        height: 240px;
+        padding-top: 20px;
+        margin-top: 32px;
+        margin-right: -18px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols {
+        background: transparent url(../../images/en_gb/970/segments-symbols.png) no-repeat;
+        float: left;
+        width: 62px;
+        height: 69px;
+        margin: 0 5px;
+        background-position: 0 -210px;
+        background-size: 475%
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols:hover {
+        background-position: 0 0
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-2 {
+        background-position: -77px -210px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-2:hover {
+        background-position: -77px 0
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-3 {
+        background-position: -152px -210px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-3:hover {
+        background-position: -152px 0
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-4 {
+        background-position: -228px -210px;
+        margin-right: 0
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-4:hover {
+        background-position: -228px 0
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-5 {
+        background-position: 0 -279px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-5:hover {
+        background-position: 0 -68px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-6 {
+        background-position: -77px -279px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-6:hover {
+        background-position: -77px -68px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-7 {
+        background-position: -152px -279px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-7:hover {
+        background-position: -152px -68px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-8 {
+        background-position: -228px -279px;
+        margin-right: 0
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-8:hover {
+        background-position: -228px -68px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-9 {
+        background-position: 0 -349px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-9:hover {
+        background-position: 0 -138px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-10 {
+        background-position: -77px -349px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-10:hover {
+        background-position: -77px -138px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-11 {
+        background-position: -152px -349px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-11:hover {
+        background-position: -152px -138px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-12 {
+        background-position: -228px -349px;
+        margin-right: 0
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-12:hover {
+        background-position: -228px -138px
+    }
+
+    #footer .footer-wrap .footer-section3 {
+        background: 0
+    }
+
+    #footer .footer-wrap .symbols-top {
+        position: absolute;
+        margin-left: 25px;
+        padding: 10px 50px;
+        font-size: 24px
+    }
+}
+
+@media only screen and (max-width: 1170px) and (max-width:970px) {
+    #footer .footer-wrap {
+        width:750px
+    }
+
+    #footer .footer-wrap .footer-section1 {
+        width: 258px;
+        height: 265px;
+        margin-top: 49px
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-section1-right {
+        margin-top: 0;
+        height: 20px;
+        width: 220px
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network {
+        margin-right: 26px;
+        margin-top: 26px;
+        height: 112px;
+        width: 343px
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network1 {
+        background: transparent url(../../images/en_gb/750/social-network.png) no-repeat top right;
+        margin-top: -9px;
+        height: 92px;
+        width: 100px;
+        background-position: -132px -93px
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network1:hover {
+        background-position: -132px -2px
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network2 {
+        background: transparent url(../../images/en_gb/750/social-network.png) no-repeat top right;
+        height: 63px;
+        width: 54px;
+        margin-left: 19px;
+        margin-right: 9px;
+        background-size: 411%;
+        background-position: -68px -105px
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network2:hover {
+        background-position: -68px -18px
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network3 {
+        background: transparent url(../../images/en_gb/750/social-network.png) no-repeat top right;
+        float: right;
+        height: 63px;
+        width: 54px;
+        background-size: 411%;
+        background-position: 0 -105px
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network3:hover {
+        background-position: 0 -17px
+    }
+
+    #footer .footer-wrap .footer-section1 .horisontal-wrape {
+        width: 254px;
+        margin-right: 13px;
+        height: 80px;
+        float: right;
+        margin-top: -10px
+    }
+
+    #footer .footer-wrap .footer-section1 .horisontal-line {
+        background: transparent url(../../images/en_gb/750/okvir-570.png) no-repeat top right;
+        background-size: 100% 100%;
+        width: 241px;
+        height: 86px;
+        padding-left: 27px;
+        padding-top: 8px;
+        font-size: 10px
+    }
+
+    #footer .footer-wrap .footer-section1 .zupska-avlija-logo-footer {
+        background: transparent url(../../images/en_gb/1170/numero.png) no-repeat top left;
+        background-size: 100% 100%;
+        float: right;
+        width: 71px;
+        height: 43px;
+        margin-top: 14px;
+        margin-right: -9px;
+        display: none
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-trip {
+        position: absolute;
+        top: 65%;
+        left: 2.5%;
+        width: 160px;
+        height: 53px
+    }
+
+    #footer .footer-wrap .footer-section1 .wrapperLink img {
+        width: 164px
+    }
+
+    #footer .footer-wrap .footer-section1 .wrapperLink .rightSide {
+        left: 43px
+    }
+
+    #footer .footer-wrap .footer-section1 .wrapperLink .image img {
+        width: 108px
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-span1 {
+        left: 7px
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-span2 {
+        left: 103px
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-span3 {
+        left: 7px
+    }
+
+    #footer .footer-wrap .footer-section1 p>span {
+        margin-left: 0
+    }
+
+    #footer .footer-wrap .footer-section2 {
+        background: transparent url(../../images/en_gb/1170/vertical-line.png) no-repeat top right;
+        height: 265px;
+        float: left;
+        margin-top: 49px;
+        width: 190px
+    }
+
+    #footer .footer-wrap .footer-section2 #qr-code-srb {
+        background: transparent url(../../images/en_gb/750/qr-code-srb.png) no-repeat bottom right;
+        background-size: 100% 100%;
+        width: 115px;
+        height: 114px;
+        float: right;
+        background-size: 100%;
+        margin-right: -116px;
+        margin-top: 59px
+    }
+
+    #footer .footer-wrap .footer-section2 #qr-code-text {
+        margin-top: 3px;
+        width: 119px;
+        float: right;
+        margin-right: 38px;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 113px;
+    }
+
+    #footer .footer-wrap .footer-section2 #qr-code-text .font26px {
+        font-size: 25px!important;
+        width: 150px;
+        text-align: center;
+        padding-right:28px;
+    }
+
+    #footer .footer-wrap .footer-section2 #qr-code-text .postion {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    #footer .footer-wrap .footer-section2 #symbol-qr {
+        display: none
+    }
+
+    #footer .footer-wrap .footer-section2 #symbol-text {
+        width: 130px;
+        margin-left: 26px
+    }
+
+    #footer .footer-wrap .footer-section2 #symbol-text p {
+        font-size: 17px
+    }
+
+    #footer .footer-wrap .footer-section2 span {
+        display: none
+    }
+
+    #footer .footer-wrap .footer-section2 #symbol-text>.green {
+        font-size: 24px;
+        font-family: code
+    }
+
+    #footer .footer-wrap .footer-section2 .ninethine-px {
+        font-size: 19.5px!important
+    }
+
+    #footer .footer-wrap .footer-section3 {
+        height: 265px;
+        width: 272px;
+        float: left;
+        margin-top: 49px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap {
+        float: right;
+        width: 311px;
+        height: 240px;
+        padding-top: 20px;
+        margin-top: 32px;
+        margin-right: -50px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols {
+        background: transparent url(../../images/en_gb/750/segments-symbols.png) no-repeat;
+        float: left;
+        width: 54px;
+        height: 60px;
+        margin: 0 5px;
+        background-position: 0 -178px;
+        background-size: 450%
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols:hover {
+        background-position: 0 3px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-2 {
+        background-position: -60px -178px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-2:hover {
+        background-position: -60px 3px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-3 {
+        background-position: -122px -178px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-3:hover {
+        background-position: -122px 3px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-4 {
+        background-position: -186px -178px;
+        margin-right: 0
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-4:hover {
+        background-position: -186px 3px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-5 {
+        background-position: 0 -238px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-5:hover {
+        background-position: 0 -57px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-6 {
+        background-position: -60px -238px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-6:hover {
+        background-position: -60px -57px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-7 {
+        background-position: -122px -238px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-7:hover {
+        background-position: -122px -57px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-8 {
+        background-position: -186px -238px;
+        margin-right: 0
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-8:hover {
+        background-position: -186px -57px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-9 {
+        background-position: 0 -299px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-9:hover {
+        background-position: 0 -118px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-10 {
+        background-position: -60px -299px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-10:hover {
+        background-position: -60px -118px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-11 {
+        background-position: -122px -299px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-11:hover {
+        background-position: -122px -118px
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-12 {
+        background-position: -186px -299px;
+        margin-right: 0
+    }
+
+    #footer .footer-wrap .footer-section3 .symbols-wrap .symbols.symbol-12:hover {
+        background-position: -186px -118px
+    }
+
+    #footer .footer-wrap .footer-section3 {
+        background: 0
+    }
+
+    #footer .footer-wrap .symbols-top {
+        position: absolute;
+        margin-left: 55px;
+        padding: 2px 14px;
+        font-size: 20px;
+        line-height: 25px
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #facebook-footer {
+        display:block;
+        background: transparent url(../../images/en_gb/480/papir-fb.png);
+        width: 454px;
+        height: 131px;
+        position: relative;
+        bottom: 546px;
+        left: 48%;
+        margin-left: -219px
+    }
+
+    #facebook-footer .fb-like {
+        position: absolute;
+        top: 48%;
+        left: 5%
+    }
+
+    #footer {
+        background: transparent url(../../images/en_gb/480/footer-pozadina.png) repeat-x;
+        height: 410px
+    }
+
+    #footer .footer-wrap {
+        width: 480px;
+        height: 410px
+    }
+
+    #footer .footer-wrap .footer-section1 {
+        background: 0;
+        position: absolute;
+        top: 55%;
+        float: left;
+        width: 100%;
+        height: 40%;
+        margin-top: 0
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-section1-right {
+        display: none
+    }
+
+    #footer .footer-wrap .footer-section1 .social-network {
+        display: none
+    }
+
+    #footer .footer-wrap .footer-section1 .horisontal-wrape {
+        width: 100%;
+        margin-right: 13px;
+        height: 80px;
+        float: left;
+        margin-top: 35px
+    }
+
+    #footer .footer-wrap .footer-section1 .horisontal-line {
+        background: transparent url(../../images/en_gb/480/footer-konac.png) no-repeat top right;
+        background-size: 100% 100%;
+        width: 452px;
+        height: 96px;
+        float: left;
+        padding-left: 27px;
+        padding-top: 8px;
+        font-size: 10px
+    }
+
+    #footer .footer-wrap .footer-section1 .zupska-avlija-logo-footer {
+        background: transparent url(../../images/en_gb/480/icon-foter.png) no-repeat top left;
+        background-size: 100% 100%;
+        float: right;
+        width: 83px;
+        height: 51px;
+        margin-top: 15px;
+        margin-right: 24px;
+        display: block
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-trip {
+        position: absolute;
+        top: 32%;
+        left: 3.5%;
+        width: 203px;
+        height: 53px
+    }
+
+    #footer .footer-wrap .footer-section1 .wrapperLink img {
+        width: 203px
+    }
+
+    #footer .footer-wrap .footer-section1 .wrapperLink .rightSide {
+        left: 67px
+    }
+
+    #footer .footer-wrap .footer-section1 .wrapperLink .image img {
+        width: 130px
+    }
+
+    #footer .footer-wrap .footer-section1 .logo-footer {
+        background: transparent url(../../images/en_gb/480/logo-footer.png) no-repeat top left;
+        background-size: 100% 100%;
+        float: right;
+        width: 98px;
+        height: 52px;
+        margin-top: 15px;
+        margin-right: 13px
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-span1 {
+        left: 32%;
+        top: 96%
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-span2 {
+        left: 52%;
+        top: 96%
+    }
+
+    #footer .footer-wrap .footer-section1 .footer-span3 {
+        left: 28%;
+        top: 86%
+    }
+
+    #footer .footer-wrap .footer-section1 p>span {
+        margin-left: 0
+    }
+
+    #footer .footer-wrap .footer-section2 {
+        background: 0;
+        position: absolute:top:0;
+        width: 100%;
+        height: 50%;
+        margin-top: 0
+    }
+
+    #footer .footer-wrap .footer-section2 #qr-code-srb {
+        background: transparent url(../../images/en_gb/480/qr-code.png) no-repeat bottom right;
+        background-size: 100% 100%;
+        width: 139px;
+        height: 138px;
+        float: right;
+        background-size: 100%;
+        margin-right: 35px;
+        margin-top: 101px
+    }
+
+    #footer .footer-wrap .footer-section2 #qr-code-text {
+        position: absolute;
+        top: 11.8%;
+        left: 33%;
+        width: 310px;
+        font-size: 28px;
+        text-align: center;
+        float: left;
+        margin: 0;
+        padding: 0
+    }
+
+    #footer .footer-wrap .footer-section2 #qr-code-text .green {
+        color: #000;
+        font-weight: 700;
+        float: left;
+        font-size: 28px
+    }
+
+    #footer .footer-wrap .footer-section2 #qr-code-text span {
+        position: absolute;
+        top: -18px;
+        left: 83px
+    }
+
+    #footer .footer-wrap .footer-section2 #qr-code-text .postion {
+        position: absolute;
+        top: 0;
+        left: 106px!important;
+        font-size: 25px!important
+    }
+
+    #footer .footer-wrap .footer-section2 #qr-code-text .postion span {
+        display: block;
+        top: -12px
+    }
+
+    #footer .footer-wrap .footer-section2 #symbol-qr {
+        display: block;
+        background: transparent url(../../images/en_gb/480/qr-symbol.png) no-repeat bottom right;
+        background-size: 100% 100%;
+        position: absolute;
+        margin-left: 6%;
+        margin-top: 10%;
+        width: 95px;
+        height: 149px
+    }
+
+    #footer .footer-wrap .footer-section2 #symbol-text {
+        width: 140px;
+        margin-left: 111px;
+        margin-top: 96px
+    }
+
+    #footer .footer-wrap .footer-section2 #symbol-text .green {
+        margin-right: 5px!important;
+        font-size: 28px!important
+    }
+
+    #footer .footer-wrap .footer-section2 #symbol-text .location {
+        display: block
+    }
+
+    #footer .footer-wrap .footer-section2 #symbol-text .location span {
+        display: block!important;
+        position: absolute;
+        top: 49%;
+        left: 12%;
+        width: 44%;
+        height: 9%;
+        background-color: #9C0202;
+        color: #DBBB8D;
+        text-align: center;
+        padding-top: 3px;
+        font-family: regular;
+        font-size: 21px
+    }
+
+    #footer .footer-wrap .footer-section2 #right {
+        background: transparent url(../../images/en_gb/480/strelica-footer.png) no-repeat bottom right;
+        width: 15px;
+        height: 65px;
+        position: absolute;
+        left: 269px;
+        top: 100px
+    }
+
+    #footer .footer-wrap .footer-section2 .green>span {
+        display: block
+    }
+
+    #footer .footer-wrap .footer-section2 #symbol-text>.green {
+        font-size: 28px;
+        font-family: code
+    }
+
+    #footer .footer-wrap .footer-section2 .ninethine-px {
+        font-size: 24px!important;
+        margin-bottom: -7px
+    }
+
+    #footer .footer-wrap .footer-section2 p {
+        line-height: 29px!important;
+        font-size: 20px!important;
+        margin-bottom: -7px
+    }
+
+    #footer .footer-wrap .footer-section3 {
+        display: none;
+        height: 0;
+        width: 0;
+        margin-top: 0
+    }
+
+    .facebook1 {
+        position: absolute;
+        top: 29px;
+        left: 24px;
+        font-size: 23px
+    }
+}
+
+#extended-footer2 {
+    display: none
+}
+
+@font-face {
+    font-family: content;
+    src: url(../../fonts/passport.ttf)
+}
+
+#coffe-perspective {
+    background-image: url(../../images/en_gb/1170/coffe-perspective.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    width: 561px;
+    height: 614px;
+    top: 3%;
+    left: 59%;
+    z-index: 1
+}
+
+#paper {
+    background-image: url(../../images/en_gb/1170/paper.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 0;
+    width: 1043px;
+    height: 766px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    font-family: content
+}
+
+#about-us {
+    background-image: url(../../images/en_gb/1170/prica-o-nama.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 12%;
+    left: 11%;
+    z-index: 0;
+    width: 339px;
+    height: 85px
+}
+
+#sugar {
+    background-image: url(../../images/en_gb/1170/sugar.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 76%;
+    left: 84%;
+    z-index: 0;
+    width: 223px;
+    height: 175px
+}
+
+#about-us-content {
+    position: relative;
+    top: 109%;
+    left: 0;
+    width: 179%;
+    height: 88%
+}
+
+@media only screen and (max-width: 1170px) {
+    #paper {
+        margin-left:-389px;
+        left: 45%
+    }
+
+    #sugar {
+        top: 81%;
+        left: 78%
+    }
+
+      .index{
+    height: 800px !important;
+}
+
+.about{
+    height: 800px !important;
+}
+
+.contact{
+    height: 1400px !important;
+}
+
+.menu{
+    height: 900px !important;
+}
+
+.gallery{
+    height: 850px !important;
+}
+
+.rooms{
+    height: 950px !important;
+}
+
+}
+
+@media only screen and (max-width: 970px) {
+    .index{
+  height: 850px !important;
+}
+
+.about{
+    height: 900px !important;
+}
+
+.contact{
+    height: 1700px !important;
+}
+
+.menu{
+    height: 900px !important;
+}
+
+.gallery{
+    height: 1100px !important;
+}
+
+.rooms{
+    height: 1400px !important;
+}
+    #paper {
+        background-image:url(../../images/en_gb/750/paper.png);
+        margin-left: -389px;
+        left: 45%;
+        top: 0%;
+        width: 919px;
+        height: 811px
+    }
+
+    #coffe-perspective {
+        background-image: url(../../images/en_gb/750/coffe-perspective.png);
+        width: 534px;
+        height: 584px;
+        top: 3%;
+        left: 56%
+    }
+
+    #sugar {
+        background-image: url(../../images/en_gb/750/sugar.png);
+        top: 81%;
+        left: 78%;
+        width: 189px;
+        height: 148px
+    }
+
+    #about-us {
+        top: 11%;
+        left: 17%
+    }
+}
+
+@media only screen and  (max-width: 750px) {
+    #coffe-perspective {
+        background-image:url(../../images/en_gb/480/kafa-soljica.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        width: 472px;
+        height: 515px;
+        top: 77%;
+        left: 23%;
+        z-index: 1
+    }
+
+    #paper {
+        background-image: url(../../images/en_gb/480/papir-podloga.png);
+        width: 473px;
+        height: 918px;
+        left: 48%;
+        margin-left: -171px;
+        margin-bottom: 571px
+    }
+
+    #about-us {
+        background-image: url(../../images/en_gb/480/prica-o-nama.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 8%;
+        left: 19%;
+        z-index: 0;
+        width: 290px;
+        height: 65px
+    }
+
+    #sugar {
+        background-image: url(../../images/en_gb/480/secer.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 100%;
+        left: 10%;
+        z-index: 0;
+        width: 181px;
+        height: 143px
+    }
+
+    #about-us-content {
+        position: relative;
+        top: 109%;
+        left: 0;
+        width: 101%;
+        height: 88%
+    }
+
+    #extended-footer2 {
+        display: block;
+        background-image: url(../../images/en_gb/480/papir-segmenti-manji.png);
+        position: absolute;
+        top: 116%;
+        left: 3px;
+        width: 470px;
+        height: 270px;
+        text-align: center
+    }
+
+    #extended-footer2 h3 {
+        font-family: footer-title;
+        margin-top: 54px;
+        font-size: 25px
+    }
+
+    #welcome-note2 {
+        background-image: url(../../images/en_gb/480/nasi-segmenti-ikonice.png);
+        width: 371px;
+        height: 121px;
+        position: relative;
+        top: 9%;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    @-moz-document url-prefix() {
+        #paper {
+            background-image: url(../../images/en_gb/480/papir-podloga.png);
+            width: 473px;
+            height: 918px;
+            left: 48%;
+            margin-left: -171px;
+            margin-bottom: 438px
+        }
+    }
+}
+
+@font-face {
+    font-family: content;
+    src: url(../../fonts/passport.ttf)
+}
+
+#contact-wraper {
+    position: relative;
+    width: 1250px;
+    height: 1154px;
+    z-index: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px
+}
+
+#extended-footer6 {
+    display: none
+}
+
+@media only screen and (min-width: 1310px) {
+    #contact-wraper {
+        position:relative;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 8px
+    }
+}
+
+#google-map {
+    background-image: url(../../images/en_gb/1170/google-map-zupska-avlija.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    max-height: 316px;
+    position: absolute;
+    top: 64%;
+    left: 10%;
+    z-index: 8;
+    width: 483px;
+    height: 339px;
+    max-width: 450px
+}
+
+#googleMap {
+    width: 91%;
+    height: 85%;
+    position: relative;
+    margin-top: 18px;
+    margin-left: 4%;
+    margin-right: 3%
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #googleMap {
+        width: 91%;
+        height: 86%;
+        position: relative;
+        margin-top: 17px;
+        margin-left: 4%;
+        margin-right: 3%
+    }
+}
+
+#googleMapBig {
+    position: relative;
+    width: 312%;
+    height: 230%;
+    top: -170%;
+    left: -138%;
+    display: none
+}
+
+#a-link {
+    text-decoration: none;
+    position: relative;
+    left: 37%;
+    width: 2%;
+    height: 4%;
+    font-size: 70%;
+    color: #9c0202;
+    font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+    font-size: 12px;
+    text-decoration: underline
+}
+
+#letter {
+    background-image: url(../../images/en_gb/1170/letter.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    max-width: 693px;
+    max-height: 773px;
+    position: absolute;
+    left: 4.5%;
+    z-index: 4;
+    width: 693px;
+    height: 773px;
+    top: 0
+}
+
+#marker-map1 {
+    background-image: url(../../images/en_gb/1170/marker-map.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 3;
+    width: 14px;
+    height: 24px
+}
+
+#paper-contact {
+    background-image: url(../../images/en_gb/1170/contact-paper.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -7px;
+    left: 53.5%;
+    z-index: 0;
+    width: 576px;
+    height: 672px
+}
+
+#contact-title {
+    width: 100%;
+    height: 6%;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    text-align: center;
+    font-size: 24px
+}
+
+#contact-title p span {
+    color: #9C0202!important;
+    font-size: 16px
+}
+
+#pod-title {
+    width: 100%;
+    height: 6%;
+    position: absolute;
+    top: 11%;
+    left: 0;
+    text-align: center
+}
+
+#dart {
+    background-image: url(../../images/en_gb/1170/strelica.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 15%;
+    left: 6%;
+    width: 35px;
+    height: 43px
+}
+
+#content-wraper {
+    width: 70%;
+    height: 77%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 127px
+}
+
+.contact-content {
+    background-image: url(../../images/en_gb/1170/linija-horizontalna.png);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    width: 100%;
+    height: 16%
+}
+
+.contact-content a {
+    background-image: url(../../images/en_gb/1170/tag-icon.png);
+    background-repeat: no-repeat;
+    background-size: 14px 24px;
+    background-position: 47% 40%;
+    width: 25%;
+    height: 82%;
+    position: relative;
+    float: right;
+    color: #9c0202;
+    font-size: 10px;
+    padding-top: 45px;
+    padding-left: 10px;
+    font-size: 12px;
+    font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+    text-decoration: underline
+}
+
+.contact-content .iner-title {
+    width: 33%;
+    height: 100%;
+    position: relative;
+    float: left
+}
+
+.contact-content .iner-title p:nth-child(2) {
+    color: #00481b!important
+}
+
+.contact-content .iner-title p span {
+    color: #000!important
+}
+
+.contact-content .back-km {
+    background-image: url(../../images/en_gb/1170/pozadina-km.png);
+    background-repeat: no-repeat;
+    background-size: 82px 66px;
+    width: 20%;
+    height: 82%;
+    position: relative;
+    float: left;
+    color: #D72421;
+    padding-top: 19px;
+    margin-top: 5px;
+    margin-right: 8px;
+    text-align: center
+}
+
+.contact-content .minutes {
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 82%
+}
+
+.contact-content .simbol1 {
+    background-image: url(../../images/en_gb/1170/3-30h.png);
+    background-repeat: no-repeat;
+    background-size: 69px 61px;
+    background-position: 0 10px
+}
+
+.contact-content .simbol2 {
+    background-image: url(../../images/en_gb/1170/5min.png);
+    background-repeat: no-repeat;
+    background-size: 53px 61px;
+    background-position: 0 10px
+}
+
+.contact-content .simbol3 {
+    background-image: url(../../images/en_gb/1170/13min.png);
+    background-repeat: no-repeat;
+    background-size: 65px 61px;
+    background-position: 0 10px
+}
+
+.contact-content .simbol4 {
+    background-image: url(../../images/en_gb/1170/24min.png);
+    background-repeat: no-repeat;
+    background-size: 62px 61px;
+    background-position: 0 10px
+}
+
+.contact-content .simbol5 {
+    background-image: url(../../images/en_gb/1170/44min.png);
+    background-repeat: no-repeat;
+    background-size: 62px 61px;
+    background-position: 0 10px
+}
+
+.contact-content .simbol6 {
+    background-image: url(../../images/en_gb/1170/69min.png);
+    background-repeat: no-repeat;
+    background-size: 61px 61px;
+    background-position: 0 10px
+}
+
+.contact-content:last-child {
+    background-image: none!important
+}
+
+#contact-leter-content {
+    word-break: break-all;
+    width: 40%;
+    height: 25%;
+    position: relative;
+    top: 29%;
+    left: 27%;
+    font-size: 18px
+}
+
+#contact-leter-content a {
+    text-decoration: none;
+    color: #00481b!important
+}
+
+@-moz-document url-prefix() {
+    #googleMap {
+        width: 91%;
+        height: 86%;
+        position: relative;
+        margin-top: 17px;
+        margin-left: 4%;
+        margin-right: 3%
+    }
+}
+
+#googleli {
+    background-image: url(../../images/en_gb/1170/google-plus-pozadina.png);
+    position: absolute;
+    width: 229px;
+    height: 308px;
+    left: 53%;
+    top: 59%;
+    z-index: 7
+}
+
+#contact-facebook {
+    background-image: url(../../images/en_gb/1170/facebook-pozadina.png);
+    width: 274px;
+    height: 130px;
+    top: 152%;
+    left: -5%;
+    position: absolute
+}
+
+.facebook {
+    position: absolute;
+    top: 27px;
+    left: 29px;
+    font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Geneva,Verdana,sans-serif
+}
+
+#contact-trip {
+    background-image: url(../../images/en_gb/1170/tripadvisor-pozadina.png);
+    width: 291px;
+    height: 440px;
+    top: 100%;
+    left: 44%;
+    position: absolute
+}
+
+#CDSWIDWRM1 {
+    margin: 0;
+    padding: 0;
+    width: 180px;
+    border: 0;
+    background-color: transparent;
+    overflow: hidden;
+    height: auto;
+    position: relative
+}
+
+#CDSWIDWRM2 {
+    padding: 13px 11px
+}
+
+#CDSWIDWRM3 {
+    margin: 3px 0;
+    padding: 0 0 8px;
+    overflow: hidden;
+    text-align: center
+}
+
+#CDSWIDWRM4 {
+    margin: 0;
+    padding: 10px 0 8px;
+    border: 0;
+    font: 700 14px Arial,Verdana,Tahoma,'Bitstream Vera Sans',sans-serif;
+    color: #2c2c2c;
+    text-align: center;
+    line-height: normal;
+    letter-spacing: 0
+}
+
+#coment {
+    margin: 0;
+    padding: 6px 0;
+    border: 0;
+    background-color: none;
+    white-space: nowrap;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative
+}
+
+.TA_selfserveprop {
+    position: absolute;
+    top: 29px;
+    left: 23px
+}
+
+#___page_0 {
+    position: absolute;
+    top: 42px;
+    left: 21px
+}
+
+.fb_iframe_widget {
+   float: right !important;
+  height: 20px !important;
+  position: relative;
+}
+
+@media only screen and (max-width: 1170px) {
+    #contact-wraper {
+        left:45%;
+        margin-left: -428px;
+        margin-bottom: 204px
+    }
+
+    #google-map {
+        top: 89%;
+        left: 13%
+    }
+
+    #letter {
+        left: -10%;
+        z-index: 4;
+        top: 39px
+    }
+
+    #paper-contact {
+        top: 38px;
+        left: 39%
+    }
+
+    #contact-facebook {
+        top: 116%;
+        left: -60%
+    }
+
+    #googleli {
+        left: 34%;
+        top: 61%
+    }
+
+    #contact-trip {
+        top: 100%;
+        left: 37%
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    #contact-wraper {
+        left:45%;
+        margin-left: -428px;
+        margin-bottom: 524px;
+    }
+
+    #google-map {
+        top: 118%;
+        left: 13%
+    }
+
+    #letter {
+        left: -1%;
+        z-index: 4;
+        top: 0px;
+    }
+
+    #paper-contact {
+        top: 62%;
+        left: 12%;
+        z-index: 5
+    }
+
+    #contact-facebook {
+        top: -100%;
+        left: 68%
+    }
+
+    #googleli {
+        left: 51%;
+        top: 116%;
+        z-index: 11
+    }
+
+    #contact-trip {
+        top: -73%;
+        left: 67%
+    }
+}
+
+@media only screen and  (max-width: 750px) {
+    #contact-wraper {
+        left:45%;
+        margin-left: -428px;
+        margin-bottom: 1405px;
+        top:140px;
+
+    }
+
+    #google-map {
+        background-image: url(../../images/en_gb/480/google-map.png);
+        width: 483px;
+        height: 339px;
+        top: 62%;
+        left: 23%
+    }
+
+    #letter {
+        background-image: url(../../images/en_gb/480/pismo.png);
+        left: 21%;
+        z-index: 4;
+        top: -138px;
+        width: 693px;
+        height: 773px
+    }
+
+    #paper-contact {
+        background-image: url(../../images/en_gb/480/papir-km.png);
+        width: 466px;
+        height: 688px;
+        top: 90%;
+        left: 22%;
+        z-index: 10
+    }
+
+    #contact-facebook {
+        background-image: url(../../images/en_gb/480/fb-papir.png);
+        width: 274px;
+        height: 130px;
+        top: -66%;
+        left: 35%
+    }
+
+    #googleli {
+        background-image: url(../../images/en_gb/480/google-plus-papir.png);
+        left: 44%;
+        top: 152%;
+        z-index: 11;
+        width: 229px;
+        height: 308px
+    }
+
+    #contact-trip {
+        background-image: url(../../images/en_gb/480/trip-advisor-papir.png);
+        background-repeat: no-repeat;
+        width: 291px;
+        height: 440px;
+        top: 102%;
+        left: -1%
+    }
+
+    #contact-content {
+        background-image: url(../../images/en_gb/480/linija-horizontalna.png);
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        width: 100%;
+        height: 16%
+    }
+
+    #dart {
+        display: none
+    }
+
+    #extended-footer6 {
+        display: block;
+        background-image: url(../../images/en_gb/480/papir-segmenti-manji.png);
+        position: absolute;
+        top: 185%;
+        left: 22%;
+        width: 470px;
+        height: 270px;
+        text-align: center
+    }
+
+    #extended-footer6 h3 {
+        font-family: footer-title;
+        margin-top: 54px;
+        font-size: 25px
+    }
+
+    #content-wraper {
+        width: 88%;
+        height: 77%;
+        margin-left: 25px;
+        margin-top: 127px
+    }
+
+    .iner-title {
+        width: 33%;
+        height: 100%;
+        position: relative;
+        float: left;
+        padding-top: 13px
+    }
+
+    @-moz-document url-prefix() {
+        #contact-wraper {
+            left: 44.5%;
+            margin-left: -428px;
+            margin-bottom: 1272px
+        }
+
+        @-moz-document url-prefix() {
+            #googleMap {
+                width: 91%;
+                height: 85%;
+                position: relative;
+                margin-top: 18px;
+                margin-left: 4%;
+                margin-right: 3%
+            }
+        }
+    }
+}
+
+@font-face {
+    font-family: title;
+    src: url(../../fonts/bold.ttf)
+}
+
+@font-face {
+    font-family: content;
+    src: url(../../fonts/passport.ttf)
+}
+
+#photo-wraper {
+    position: relative;
+    width: 1037px;
+    height: 741px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 67px;
+    font-family: content
+}
+
+#milenija {
+    background-image: url(../../images/en_gb/1170/tradicija.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 53%;
+    left: 34%;
+    z-index: 1;
+    width: 376px;
+    height: 296px
+}
+
+#milenija {
+    cursor: pointer
+}
+
+#extended-footer4 {
+    display: none
+}
+
+#milenija>div>span {
+    position: absolute;
+    top: 3%;
+    left: 39%;
+    font-size: 18px
+}
+
+#basta {
+    background-image: url(../../images/en_gb/1170/letnja-basta.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 3%;
+    left: 76%;
+    z-index: 1;
+    width: 309px;
+    height: 349px
+}
+
+#basta:hover {
+    cursor: pointer
+}
+
+#basta>div>span {
+    position: absolute;
+    top: 3%;
+    left: 24%;
+    font-size: 18px
+}
+
+#kreacije {
+    background-image: url(../../images/en_gb/1170/nase-kreacije.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 46%;
+    left: 14px;
+    z-index: 1;
+    width: 288px;
+    height: 409px
+}
+
+#kreacije:hover {
+    cursor: pointer
+}
+
+#kreacije>div>span {
+    position: absolute;
+    top: 2%;
+    left: 33%;
+    font-size: 18px
+}
+
+#recepti {
+    background-image: url(../../images/en_gb/1170/tradicionalni-recepti.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 54%;
+    left: 77%;
+    z-index: 1;
+    width: 424px;
+    height: 398px;
+    font-family: title
+}
+
+#recepti ul {
+    position: absolute;
+    top: 37%;
+    left: 34px;
+    list-style-type: none;
+    font-size: 18px;
+    font-style: italic
+}
+
+#recepti li {
+    margin-bottom: 3px
+}
+
+#recepti h3 {
+    font-size: 38px;
+    text-align: center;
+    width: 256px;
+    position: absolute;
+    top: 49px;
+    left: 0;
+    font-weight: 400
+}
+
+#recepti p {
+    position: absolute;
+    top: 76%;
+    left: 7%;
+    font-size: 18px;
+    color: #9C0202;
+    font-style: italic
+}
+
+#recepti {
+    cursor: pointer
+}
+
+#restoran-slike {
+    background-image: url(../../images/en_gb/1170/restoran-slike.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 6%;
+    left: 34%;
+    z-index: 1;
+    width: 375px;
+    height: 296px
+}
+
+#restoran-slike:hover {
+    cursor: pointer
+}
+
+#restoran-slike>div>span {
+    position: absolute;
+    left: 16%;
+    top: 4%;
+    font-size: 18px
+}
+
+#klik-pregled-galerija {
+    background-image: url(../../images/en_gb/1170/klik-pregled-galerija.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 12%;
+    left: 0;
+    z-index: 1;
+    width: 322px;
+    height: 154px
+}
+
+#persil-header {
+    background-image: url(../../images/en_gb/1170/persil.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    z-index: 0;
+    width: 245px;
+    height: 294px
+}
+
+@media only screen and  (max-width: 1170px) {
+    #photo-wraper {
+        left:45%;
+        margin-left: -431px;
+        margin-bottom: 37px
+    }
+
+    #basta {
+        top: 3%;
+        left: 69%
+    }
+
+    #kreacije {
+        top: 46%;
+        left: 5%
+    }
+
+    #recepti {
+        top: 53%;
+        left: 72%
+    }
+
+    #restoran-slike {
+        top: 10%;
+        left: 31%
+    }
+
+    #klik-pregled-galerija {
+        top: 4%;
+        left: 7%
+    }
+}
+
+@media only screen and  (max-width: 970px) {
+    #photo-wraper {
+        left:45%;
+        margin-left: -337px;
+        margin-bottom: 317px
+    }
+
+    #milenija {
+        top: 47%;
+        left: 40%
+    }
+
+    #basta {
+        top: 26%;
+        left: 7%
+    }
+
+    #kreacije {
+        top: 79%;
+        left: 9%
+    }
+
+    #recepti {
+        top: 87%;
+        left: 45%
+    }
+
+    #restoran-slike {
+        top: 3%;
+        left: 41%
+    }
+
+    #klik-pregled-galerija {
+        top: 4%;
+        left: 7%
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .index{
+    height: 1171px !important;
+}
+
+.about{
+    height: 1496px !important;
+}
+
+.contact{
+    height: 2707px !important;
+}
+
+.menu{
+    height: 1571px !important;
+}
+
+.gallery{
+    height: 2260px !important;
+}
+
+.rooms{
+    height: 2029px !important;
+}
+
+.full {
+    display: none;
+}
+    #photo-wraper {
+        left:48%;
+        margin-left: -337px;
+        margin-bottom: 1469px;
+        top:45px;
+    }
+
+    #milenija {
+        background-image: url(../../images/en_gb/480/tradicija.png);
+        width: 376px;
+        height: 296px;
+        top: 145%;
+        left: 20%
+    }
+
+    #basta {
+        background-image: url(../../images/en_gb/480/letnja-basta.png);
+        width: 309px;
+        height: 349px;
+        top: 38%;
+        left: 21%
+    }
+
+    #kreacije {
+        background-image: url(../../images/en_gb/480/nase-kreacije.png);
+        width: 288px;
+        height: 409px;
+        top: 87%;
+        left: 25%
+    }
+
+    #recepti {
+        background-image: url(../../images/en_gb/480/recepti.png);
+        width: 295px;
+        height: 398px;
+        top: 186%;
+        left: 19%
+    }
+
+    #restoran-slike {
+        background-image: url(../../images/en_gb/480/restoran.png);
+        width: 375px;
+        height: 296px;
+        top: -4%;
+        left: 20%
+    }
+
+    #klik-pregled-galerija {
+        display: none
+    }
+
+    #waste {
+        background-image: url(../../images/en_gb/480/otpad.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 220%;
+        left: 40%;
+        width: 252px;
+        height: 130px
+    }
+
+    #extended-footer4 {
+        display: block;
+        background-image: url(../../images/en_gb/480/papir-segmenti-manji.png);
+        position: absolute;
+        top: 241%;
+        left: 16%;
+        width: 470px;
+        height: 270px;
+        text-align: center
+    }
+
+    #extended-footer4 h3 {
+        font-family: footer-title;
+        margin-top: 54px;
+        font-size: 25px
+    }
+
+    @-moz-document url-prefix() {
+        #photo-wraper {
+            left: 48%;
+            margin-left: -337px;
+            margin-bottom: 1340px
+        }
+    }
+}
+
+@font-face {
+    font-family: content;
+    src: url(../../fonts/passport.ttf)
+}
+
+#manu-wraper {
+    position: relative;
+    left: 45%;
+    z-index: 0;
+    width: 1300px;
+    height: 800px;
+    margin-left: -610px
+}
+
+#extended-footer3 {
+    display: none
+}
+
+@media only screen and (min-width: 1310px) {
+    #manu-wraper {
+        position:relative;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
+#bread {
+    background-image: url(../../images/en_gb/1170/bread.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 78%;
+    left: 27%;
+    z-index: 0;
+    width: 244px;
+    height: 248px
+}
+
+#dinar {
+    background-image: url(../../images/en_gb/1170/dinar.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 7%;
+    left: 89%;
+    z-index: 0;
+    width: 135px;
+    height: 123px
+}
+
+#menu-menu {
+    background-image: url(../../images/en_gb/1170/jelovnik.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 47%;
+    z-index: 0;
+    width: 592px;
+    height: 842px
+}
+
+#menu-menu:hover {
+    cursor: pointer
+}
+
+#klik {
+    background-image: url(../../images/en_gb/1170/klik-pregled.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 4%;
+    left: 26%;
+    width: 229px;
+    height: 148px
+}
+
+#klik p {
+    display: none
+}
+
+#pepper-menu {
+    background-image: url(../../images/en_gb/1170/pepper.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 12px;
+    left: -8px;
+    z-index: 0;
+    height: 165px;
+    width: 321px
+}
+
+#cheese {
+    background-image: url(../../images/en_gb/1170/sir.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 22%;
+    left: 7%;
+    z-index: 0;
+    width: 482px;
+    height: 485px
+}
+
+#ladybug {
+    background-image: url(../../images/en_gb/1170/bubamara.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 133px;
+    z-index: 6;
+    width: 245px;
+    height: 294px
+}
+
+@media only screen and (max-width: 1170px) {
+    #dinar {
+        position:absolute;
+        top: 7%;
+        left: 84%
+    }
+
+    #menu-menu {
+        position: absolute;
+        top: 0;
+        left: 46%
+    }
+
+    #klik {
+        position: absolute;
+        top: 4%;
+        left: 28%
+    }
+
+    #pepper-menu {
+        position: absolute;
+        top: 2%;
+        left: 100px
+    }
+
+    #cheese {
+        position: absolute;
+        top: 24%;
+        left: 11%
+    }
+
+    #bread {
+        position: absolute;
+        top: 78%;
+        left: 29%
+    }
+}
+
+@media only screen and  (max-width: 970px) {
+    #bread {
+        background-image:url(../../images/en_gb/750/bread.png);
+        top: 83%;
+        left: 30%;
+        width: 221px;
+        height: 224px
+    }
+
+    #dinar {
+        background-image: url(../../images/en_gb/750/dinar.png);
+        top: 7%;
+        left: 89%;
+        width: 127px;
+        height: 115px
+    }
+
+    #menu-menu {
+        background-image: url(../../images/en_gb/750/jelovnik.png);
+        top: 1%;
+        left: 45%;
+        width: 592px;
+        height: 842px
+    }
+
+    #klik {
+        background-image: url(../../images/en_gb/750/klik-pregled.png);
+        top: 5%;
+        left: 27%;
+        width: 197px;
+        height: 129px
+    }
+
+    #pepper-menu {
+        background-image: url(../../images/en_gb/750/pepper.png);
+        top: 13%;
+        left: 205px;
+        z-index: 0;
+        height: 153px;
+        width: 297px
+    }
+
+    #cheese {
+        background-image: url(../../images/en_gb/750/sir.png);
+        top: 33%;
+        left: 13%;
+        z-index: 0;
+        width: 448px;
+        height: 451px
+    }
+
+    #ladybug {
+        background-image: url(../../images/en_gb/750/bubamara.png);
+        width: 185px;
+        height: 222px;
+        left: 113px
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #manu-wraper {
+        position:relative;
+        left: 0;
+        left: 48%;
+        margin-left: -223px;
+        margin-bottom: 717px;
+        top:41px;
+    }
+
+    #bread {
+        background-image: url(../../images/en_gb/480/hleb.png);
+        top: 114%;
+        left: 1%;
+        z-index: 0;
+        width: 226px;
+        height: 198px
+    }
+
+    #dinar {
+        background-image: url(../../images/en_gb/480/dinar.png);
+        top: -4%;
+        left: 33%;
+        z-index: 0;
+        width: 127px;
+        height: 115px
+    }
+
+    #menu-menu {
+        background-image: url(../../images/en_gb/480/jelovnik.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 11%;
+        left: 0;
+        z-index: 0;
+        width: 567px;
+        height: 716px
+    }
+
+    #klik {
+        background-image: url(../../images/en_gb/480/strelica.png);
+        top: 4%;
+        left: 23%;
+        width: 74px;
+        height: 81px;
+        font-family: footer-title;
+        font-size: 39px
+    }
+
+    #klik p {
+        display: block;
+        width: 200px;
+        position: absolute;
+        top: -69px;
+        left: -61px;
+        line-height: 37px
+    }
+
+    #pepper-menu {
+        background-image: url(../../images/en_gb/480/biber.png);
+        top: 101%;
+        left: 9%;
+        z-index: 0;
+        height: 244px;
+        width: 152px
+    }
+
+    #cheese {
+        background-image: url(../../images/en_gb/480/sir.png);
+        top: 94%;
+        left: 17%;
+        z-index: 0;
+        width: 387px;
+        height: 389px;
+        z-index: 1
+    }
+
+    #ladybug {
+        background-image: url(../../images/en_gb/480/pesun-buba-mara.png);
+        position: absolute;
+        top: 0;
+        left: -2%;
+        width: 170px;
+        height: 204px
+    }
+
+    #extended-footer3 {
+        display: block;
+        background-image: url(../../images/en_gb/480/papir-segmenti-manji.png);
+        position: absolute;
+        top: 137%;
+        left: 55px;
+        width: 470px;
+        height: 270px;
+        text-align: center;
+        z-index: 0
+    }
+
+    #extended-footer3 h3 {
+        font-family: footer-title;
+        margin-top: 54px;
+        font-size: 25px
+    }
+
+    #welcome-note3 {
+        background-image: url(../../images/en_gb/480/nasi-segmenti-ikonice.png);
+        width: 371px;
+        height: 121px;
+        position: relative;
+        top: 9%;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    @-moz-document url-prefix() {
+        #manu-wraper {
+            position: relative;
+            left: 0;
+            left: 48%;
+            margin-left: -223px;
+            margin-bottom: 587px
+        }
+    }
+}
+
+@font-face {
+    font-family: footer-title;
+    src: url(../../fonts/bold.ttf)
+}
+
+@font-face {
+    font-family: content-pages;
+    src: url(../../fonts/passport.ttf)
+}
+
+#board-front {
+    background-image: url(../../images/en_gb/1170/board-front.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    left: 45%;
+    z-index: 0;
+    width: 1241px;
+    height: 603px;
+    margin-left: -519px;
+    margin-bottom: 80px;
+    font-family: content-pages
+}
+
+@media only screen and (min-width: 1310px) {
+    #board-front {
+        position:relative;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
+#dobro-nam-dosli {
+    background-image: url(../../images/en_gb/1170/dobro-nam-dosli.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    z-index: 0;
+    width: 601px;
+    height: 123px
+}
+
+#dobro-nam-dosli-mobile {
+    display: none
+}
+
+#extended-footer {
+    display: none
+}
+
+#fork-front {
+    background-image: url(../../images/en_gb/1170/fork-front.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 0;
+    top: 25%;
+    left: 7%;
+    width: 943px;
+    height: 491px
+}
+
+#paprika {
+    background-image: url(../../images/en_gb/1170/paprika.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 0;
+    top: 67%;
+    height: 394px;
+    width: 337px;
+    left: 5%
+}
+
+#paprika-2 {
+    background-image: url(../../images/en_gb/1170/paprika-2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 88%;
+    z-index: 0;
+    width: 201px;
+    height: 212px
+}
+
+#pepper-front {
+    background-image: url(../../images/en_gb/1170/pepper-front.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    z-index: 0;
+    height: 161px;
+    width: 310px;
+    top: 78%;
+    left: 70%
+}
+
+#index-page-content {
+    max-width: 28%;
+    max-height: 18%;
+    position: relative;
+    top: 33%;
+    left: 57%
+}
+
+@media only screen and (max-width: 1170px) {
+    #paprika {
+        left:12%
+    }
+
+    #paprika-2 {
+        left: 83%
+    }
+
+    #fork-front {
+        left: 13%
+    }
+
+    #pepper-front {
+        left: 68%
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    #board-front {
+        background-image:url(../../images/en_gb/750/board-front.png);
+        width: 1142px;
+        height: 552px;
+        left: 52%
+    }
+
+    #dobro-nam-dosli {
+        background-image: url(../../images/en_gb/750/dobro-nam-dosli.png);
+        top: 15%;
+        left: 32%;
+        z-index: 0;
+        width: 493px;
+        height: 102px
+    }
+
+    #fork-front {
+        background-image: url(../../images/en_gb/750/fork-front.png);
+        top: 9%;
+        left: 14%;
+        width: 789px;
+        height: 583px
+    }
+
+    #paprika {
+        background-image: url(../../images/en_gb/750/paprika.png);
+        top: 77%;
+        height: 368px;
+        width: 316px;
+        left: 21.5%
+    }
+
+    #paprika-2 {
+        background-image: url(../../images/en_gb/750/paprika-2.png);
+        top: -34px;
+        left: 74%;
+        width: 188px;
+        height: 198px
+    }
+
+    #pepper-front {
+        background-image: url(../../images/en_gb/750/pepper-front.png);
+        z-index: 0;
+        height: 150px;
+        width: 289px;
+        top: 105%;
+        left: 59%
+    }
+
+    #index-page-content {
+        top: 32%;
+        left: 55%
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #board-front {
+        background-image:url(../../images/en_gb/480/podloga.png);
+        background-size: 891px 515px;
+        width: 891px;
+        height: 515px;
+        top: 47px;
+        left: 48%;
+        margin-left: -220px;
+        margin-bottom: 605px
+    }
+
+    #dobro-nam-dosli {
+        display: none
+    }
+
+    #dobro-nam-dosli-mobile {
+        display: block;
+        position: absolute;
+        background-image: url(../../images/en_gb/480/dobro-nam-dosli.png);
+        width: 375px;
+        height: 188px;
+        top: 0px;
+        left: 48%;
+        margin-left: -112px
+    }
+
+    #fork-front {
+        background-image: url(../../images/en_gb/480/viljuska.png);
+        left: 11%;
+        left: 8%;
+        width: 613px;
+        height: 406
+    }
+
+    #paprika {
+        background-image: url(../../images/en_gb/480/zuta-paprika.png);
+        width: 270px;
+        height: 311px;
+        top: 65%;
+        left: 0;
+        z-index: 1
+    }
+
+    #paprika-2 {
+        background-image: url(../../images/en_gb/480/crvena-paprika.png);
+        width: 144px;
+        height: 145px;
+        top: 8%;
+        left: 47%
+    }
+
+    #pepper-front {
+        background-image: url(../../images/en_gb/480/biber-1.png);
+        width: 63px;
+        height: 131px;
+        top: 22%;
+        left: 49%
+    }
+
+    #pepper-front2 {
+        background-image: url(../../images/en_gb/480/biber-2.png);
+        width: 311px;
+        height: 262px;
+        position: absolute;
+        top: 56%;
+        left: 32%
+    }
+
+    #index-page-content {
+        display: none
+    }
+
+    #extended-footer {
+        display: block;
+        background-image: url(../../images/en_gb/480/papir-segmenti.png);
+        width: 470px;
+        height: 408px;
+        position: absolute;
+        top: 110%;
+        left: 2%;
+        z-index: 0;
+        left: 5.5%;
+        padding-top: 7%;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center
+    }
+
+    #extended-footer p {
+        line-height: 163%
+    }
+
+    #extended-footer h3 {
+        font-family: footer-title;
+        margin-top: 8%;
+        font-size: 26px
+    }
+
+    #extended-footer #welcome-note {
+        background-image: url(../../images/en_gb/480/nasi-segmenti-ikonice.png);
+        width: 371px;
+        height: 121px;
+        position: relative;
+        top: 7%;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    @-moz-document url-prefix() {
+        #footer {
+            position: relative;
+            bottom: -131px
+        }
+
+        #facebook-footer {
+            bottom: 413px
+        }
+
+        #board-front {
+            background-image: url(../../images/en_gb/480/podloga.png);
+            background-size: 891px 515px;
+            width: 891px;
+            height: 515px;
+            top: -10px;
+            left: 48%;
+            margin-left: -220px;
+            margin-bottom: 474px
+        }
+
+        #footer .footer-wrap .footer-section2 #qr-code-text .postion {
+            position: absolute;
+            top: 0;
+            left: 167px;
+            font-size: 28px
+        }
+    }
+}
+
+@font-face {
+    font-family: title;
+    src: url(../../fonts/bold.ttf)
+}
+
+@font-face {
+    font-family: content;
+    src: url(../../fonts/passport.ttf)
+}
+
+#extended-footer5 {
+    display: none
+}
+
+#book-hotel {
+    background-image: url(../../images/en_gb/1170/book-hotel.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    top: 14px;
+    left: 45%;
+    z-index: 0;
+    width: 664px;
+    height: 908px;
+    margin-right: 10px;
+    margin-left: -520px
+}
+
+#contact-icon {
+    background-image: url(../../images/en_gb/1170/contact-icon.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 72%;
+    z-index: 3;
+    top: 79%;
+    width: 199px;
+    height: 33px;
+    background-size: 34px 33px
+}
+
+#icons-services {
+    background-image: url(../../images/en_gb/1170/icons-services.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 83%;
+    left: 6%;
+    z-index: 0;
+    width: 400px;
+    height: 65px
+}
+
+#key {
+    background-image: url(../../images/en_gb/1170/key.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 37%;
+    left: 92%;
+    z-index: 1;
+    width: 190px;
+    height: 315px
+}
+
+#postcard {
+    background-image: url(../../images/en_gb/1170/adresa.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 505px;
+    height: 408px;
+    top: 48%;
+    left: 103%
+}
+
+#postcard a {
+    text-decoration: none
+}
+
+#postcard .red {
+    color: #D72421
+}
+
+#postcard .black {
+    color: #000
+}
+
+#postcard span {
+    position: absolute
+}
+
+#postcard .a {
+    top: 21%;
+    left: 8%;
+    font-family: title;
+    font-size: 28px;
+    font-style: italic
+}
+
+#postcard .b {
+    top: 28%;
+    left: 10%;
+    font-family: title;
+    font-size: 22px;
+    color: #9C0202!important;
+    font-style: italic
+}
+
+#postcard .b a {
+    color: #9C0202!important
+}
+
+#postcard .c {
+    top: 41%;
+    left: 10%;
+    font-family: title;
+    font-size: 20px;
+    font-style: italic
+}
+
+#postcard .d {
+    top: 47%;
+    left: 6%;
+    font-family: title;
+    font-size: 22px;
+    color: #9C0202!important;
+    font-style: italic
+}
+
+#postcard .d a {
+    color: #9C0202!important
+}
+
+#postcard .e {
+    top: 60%;
+    left: 9%;
+    border-bottom: solid 2px #000;
+    font-family: title;
+    font-size: 22px;
+    font-style: italic
+}
+
+#postcard .f {
+    top: 69%;
+    left: 14%;
+    font-family: title;
+    font-size: 22px;
+    color: #9C0202!important;
+    font-style: italic
+}
+
+#postcard .g {
+    top: 35%;
+    left: 53%;
+    font-size: 16px;
+    font-family: content
+}
+
+#postcard .h {
+    top: 44%;
+    left: 53%;
+    font-size: 16px;
+    font-family: content
+}
+
+#postcard .i {
+    top: 53%;
+    left: 53%;
+    font-size: 16px;
+    font-family: content
+}
+
+#postcard .j {
+    top: 68%;
+    left: 53%;
+    font-size: 16px;
+    font-family: content
+}
+
+#mail-icon {
+    background-image: url(../../images/en_gb/1170/mail-icon.png);
+    background-repeat: no-repeat;
+    background-size: 36px 33px;
+    position: absolute;
+    top: 85%;
+    left: 72%;
+    z-index: 1;
+    width: 180px;
+    height: 38px
+}
+
+#marker-adress {
+    background-image: url(../../images/en_gb/1170/marker-adress.png);
+    background-repeat: no-repeat;
+    background-size: 21px 34px;
+    position: absolute;
+    top: 79%;
+    left: 53%;
+    z-index: 0;
+    width: 187px;
+    height: 62px
+}
+
+#rooms-photo1 {
+    background-image: url(../../images/en_gb/1170/photo-1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 10%;
+    left: 113%;
+    z-index: 0;
+    width: 375px;
+    height: 302px
+}
+
+#rooms-photo1 span {
+    position: absolute;
+    top: 5%;
+    left: 9%;
+    font-size: 18px;
+    font-family: content
+}
+
+#rooms-photo1:hover {
+    cursor: pointer
+}
+
+#rooms-photo2 {
+    background-image: url(../../images/en_gb/1170/photo-2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    z-index: 0;
+    width: 286px;
+    height: 204px
+}
+
+#rooms-content-text {
+    width: 70%;
+    word-break: break-all;
+    position: absolute;
+    top: 26%;
+    left: 18%;
+    height: 56%;
+    font-size: 18px;
+    font-family: content
+}
+
+@media only screen and (max-width: 1170px) {
+    #book-hotel {
+        left:45%;
+        margin-left: -472px
+    }
+
+    #key {
+        top: 16%;
+        left: 143%
+    }
+
+    #rooms-photo1 {
+        top: 12%;
+        left: 93%
+    }
+
+    #postcard {
+        top: 55%;
+        left: 87%
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    #book-hotel {
+        background-image:url(../../images/en_gb/1170/book-hotel.png);
+        background-size: 664px 908px;
+        width: 664px;
+        height: 1359px;
+        margin-left: -264px;
+        margin-right: auto;
+        top: -86px;
+        left: 48%
+    }
+
+    #rooms-content-text {
+        top: 18%;
+        left: 17%;
+        height: 32%;
+        width: 85%
+    }
+
+    #contact-icon {
+        left: 38%;
+        z-index: 3;
+        top: 86%;
+        width: 199px;
+        height: 33px
+    }
+
+    #icons-services {
+        background-image: url(../../images/en_gb/750/icons-services.png);
+        width: 356px;
+        height: 59px;
+        top: 79%;
+        left: 25%
+    }
+
+    #rooms-photo1 {
+        background-image: url(../../images/en_gb/1170/photo-1.png);
+        top: 64%;
+        left: -3%;
+        z-index: 0;
+        width: 375px;
+        height: 302px
+    }
+
+    #key {
+        top: 62%;
+        left: 71%
+    }
+
+    #postcard {
+        top: 78%;
+        left: 31%
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #book-hotel {
+        background-image:url(../../images/en_gb/480/papir-smestaj.png);
+        background-size: 588px 979px;
+        width: 588px;
+        height: 979px;
+        margin-left: -235px;
+        margin-right: auto;
+        top: -12px;
+        left: 48%;
+        margin-bottom: 994px
+    }
+
+    #rooms-content-text {
+        top: 24%;
+        left: 17%;
+        height: 32%;
+        width: 69%
+    }
+
+    #contact-icon {
+        left: 38%;
+        z-index: 3;
+        top: 86%;
+        width: 199px;
+        height: 33px
+    }
+
+    #rooms-photo1 {
+        background-image: url(../../images/en_gb/480/foto-galerija.png);
+        top: 96%;
+        left: 11%;
+        z-index: 0;
+        width: 375px;
+        height: 302px
+    }
+
+    #key {
+        background-image: url(../../images/en_gb/480/kljuc.png);
+        top: 101%;
+        left: 66%;
+        width: 199px;
+        height: 325px
+    }
+
+    #postcard {
+        background-image: url(../../images/en_gb/480/razglednica-adresa.png);
+        width: 505px;
+        height: 408px;
+        top: 127%;
+        left: 8%
+    }
+
+    #extended-footer5 {
+        display: block;
+        background-image: url(../../images/en_gb/480/papir-segmenti-manji.png);
+        position: absolute;
+        top: 165%;
+        left: 68px;
+        width: 470px;
+        height: 270px;
+        text-align: center
+    }
+
+    #extended-footer5 h3 {
+        font-family: footer-title;
+        margin-top: 54px;
+        font-size: 25px
+    }
+
+    @-moz-document url-prefix() {
+        #book-hotel {
+            background-image: url(../../images/en_gb/480/papir-smestaj.png);
+            background-size: 588px 979px;
+            width: 588px;
+            height: 979px;
+            margin-left: -235px;
+            margin-right: auto;
+            top: -65px;
+            left: 48%;
+            margin-bottom: 862px
+        }
+    }
+}
+
+
+@media only screen and (max-width: 485px) {
+
+
+
+
+    #content{
+        margin-left: -113px;
+        height: 300%;
+
+    }
+
+
+
+  #footer {
+        overflow-x: hidden;
+  }
+
+    .height128{
+        height: 128%;
+    }
+}
+
+
+

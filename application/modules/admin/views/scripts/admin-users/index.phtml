@@ -1,0 +1,55 @@
+<div class="page-header"><h3><i class="entypo-user"></i> Back office users</h3></div>
+<div class="btn-group col-lg-12">
+    <div class="btn-group pull-right">
+        <a href="<?php echo $this->url(array('module' => 'admin', 'controller' => 'admin-users', 'action' => 'new'), 'default', true); ?>" class="btn btn-info left-05">
+        	<span class="glyphicon glyphicon-plus"></span> New User
+        </a>
+        <a href="<?php echo $this->url(array('module' => 'admin', 'controller' => 'menu-items', 'action' => 'index'), 'default', true); ?>" class="btn btn-info left-05">
+        	<span class="glyphicon glyphicon-dashboard"></span> Menu Items 
+        </a>
+        <a href="<?php echo $this->url(array('module' => 'admin', 'controller' => 'admin-usersgroups', 'action' => 'index'), 'default', true); ?>" class="btn btn-info left-05">
+        	<span class="glyphicon glyphicon-lock"></span> Usersgroups
+        </a>
+        <a href="<?php echo $this->url(array('module' => 'admin', 'controller' => 'admin-users', 'action' => 'action-log'), 'default', true); ?>" class="btn btn-info left-05">
+        	<span class="glyphicon glyphicon-dashboard"></span> Actions
+        </a>
+    </div>
+</div>
+<hr/>
+<?php if (count($this->paginator)): ?>
+    <table class="table table-striped table-hover table-bordered">
+        <?php echo $this->partial('partials/table_list_header.phtml', 'admin', array('headers' => $this->header)); ?>
+        <tbody>
+            <?php foreach ($this->paginator as $object): ?>
+                <?php $edit_url = $this->url(array('module' => 'admin', 'controller' => 'admin-users', 'action' => 'edit', 'id' => $object->id, 'page' => $this->page), 'default', true); ?>
+                <?php if ($object->is_active): ?>
+                    <?php $act_deact = $this->url(array('module' => 'admin', 'controller' => 'admin-users', 'action' => "deactivate", "id" => $object->id, 'page' => $this->page), "default", true); ?>
+                <?php else: ?>
+                    <?php $act_deact = $this->url(array('module' => 'admin', 'controller' => 'admin-users', 'action' => 'activate', 'id' => $object->id, 'page' => $this->page), "default", true); ?>
+                <?php endif; ?>
+                <tr>
+                    <td><?php echo $object->first_name.' '.$object->last_name; ?></td>
+                    <td><?php echo $object->email; ?></td>
+                    <td><?php echo $object->role_name; ?></td>
+                    <td><?php echo $object->is_active ? 'Yes' : 'No'; ?></td>
+                    <td>
+                        <div class="btn-group">
+                            <a class="btn" href="<?php echo $act_deact; ?>" class="btn" 
+			                            onclick='bootbox.confirm("Are you sure?<br/><br/>", function(result) {deleteHref(result, "<?php echo $act_deact; ?>")}); return false;'
+								                            > 
+								                            <span class="glyphicon glyphicon-refresh" 
+                            								data-original-title="Activate / Deactivate"	onmouseover="$(this).tooltip('show');" rel="tooltip"></span> 
+							</a>
+                            <a class="btn" href="<?php echo $edit_url; ?>" class="btn"> <span class="glyphicon glyphicon-edit" 
+                            							data-original-title="Edit Informations" onmouseover="$(this).tooltip('show');" rel="tooltip"></span> 
+							</a>
+                        </div>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <?php echo $this->paginationControl($this->paginator, 'Sliding', '/partials/pagination_control.phtml'); ?>
+<?php else: ?>
+    <div class="alert alert-info"><h3>No records found.</h3></div>
+<?php endif; ?>

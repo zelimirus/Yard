@@ -1,0 +1,15 @@
+<div class="page-header">
+    <h3>
+        Izmeni
+    </h3>
+</div>
+<?php echo $this->form; ?>
+<script type="text/javascript">
+	<?php
+	$file_name = $this->existing->file_name;
+
+	$existing_file_name_path = My_Utilities::getFullMediaPathDiffSizes($this->existing,'original');
+        if(!empty($this->existing->file_name) && file_exists(WEB_PATH.$existing_file_name_path)){?>
+                jQuery('#original').parent().append('<div style="margin-bottom:5px;" class="thumb"><img style="max-width:200px;" src="' + '<?php echo $existing_file_name_path; ?>' + '?<?php echo md5(rand(0,100));?>" /></div>');
+        <?php }?>
+</script>

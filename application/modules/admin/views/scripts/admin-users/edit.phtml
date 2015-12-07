@@ -1,0 +1,15 @@
+<div class="page-header">
+	<h3>Edit user: <span class="text-info"><?php echo $this->existing->email;?></span>
+		<small>
+			<p>Fill in the form, and save.</p>
+		</small>
+	</h3>
+</div>
+<div class="pull-left"><?php echo $this->form;?></div>
+<script type="text/javascript">
+	<?php
+	$existing_file_name_path = Zend_Registry::get('upload_profile_img_path').$this->existing['image'];
+        if(!empty($this->existing['image']) && file_exists(WEB_PATH.$existing_file_name_path)){?>
+                jQuery('#image').parent().append('<div style="margin-bottom:5px;" class="thumb"><img style="max-width:200px;" src="' + '<?php echo $existing_file_name_path; ?>' + '"" /></div>');
+        <?php }?>
+</script>
