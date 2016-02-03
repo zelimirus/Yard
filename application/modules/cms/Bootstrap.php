@@ -9,6 +9,6 @@
  * 
  * @version  august 2013
  */
-class Cms_Bootstrap extends Zend_Application_Module_Bootstrap{
-	
+class cms_Bootstrap extends Zend_Application_Module_Bootstrap
+{
 }

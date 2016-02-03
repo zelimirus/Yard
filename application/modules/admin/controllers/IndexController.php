@@ -8,9 +8,10 @@
  * 
  * @version  february 2014
  */
-class Admin_IndexController extends Zend_Controller_Action {
-	
-	public function indexAction() {
-
+class Admin_IndexController extends Zend_Controller_Action
+{
+    
+    public function indexAction()
+    {
     }
 }

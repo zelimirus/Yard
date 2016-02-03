@@ -1,12 +1,12 @@
 <?php
 
 // Define path to web directory
-if(!defined('WEB_PATH')) {
-	define('WEB_PATH', str_replace('\\', '/', dirname(__FILE__)));
+if (!defined('WEB_PATH')) {
+    define('WEB_PATH', str_replace('\\', '/', dirname(__FILE__)));
 }
 // Define path to root directory
-if(!defined('ROOT_PATH')) {
-	define('ROOT_PATH', str_replace('\\', '/', dirname(WEB_PATH)));
+if (!defined('ROOT_PATH')) {
+    define('ROOT_PATH', str_replace('\\', '/', dirname(WEB_PATH)));
 }
 // Define path to application directory
 defined('APPLICATION_PATH')

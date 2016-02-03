@@ -10,9 +10,11 @@
  *
  * @author nikola
  */
-class Cms_Form_MediasFilter extends My_Form_Search {
+class Cms_Form_MediasFilter extends My_Form_Search
+{
 
-    public function init() {
+    public function init()
+    {
         $request = Zend_Controller_Front::getInstance()->getRequest();
         $href = $request->getBaseUrl() . '/' . $request->getModuleName() . '/' . $request->getControllerName() . '/' . $request->getActionName() . '/library_id/' . $request->get('library_id');
 
@@ -33,5 +35,4 @@ class Cms_Form_MediasFilter extends My_Form_Search {
         $this->setAction($href)
                 ->setMethod('post');
     }
-
 }

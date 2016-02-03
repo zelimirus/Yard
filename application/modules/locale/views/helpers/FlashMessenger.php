@@ -8,7 +8,8 @@
  * @author Dusan Bulovan <dusan.bulovan@golive.rs>
  * @version  october 2014
  */
-class Zend_View_Helper_FlashMessenger extends Zend_View_Helper_Abstract {
+class Zend_View_Helper_FlashMessenger extends Zend_View_Helper_Abstract
+{
 
     /**
      * Return flash messages if we have it
@@ -17,7 +18,8 @@ class Zend_View_Helper_FlashMessenger extends Zend_View_Helper_Abstract {
      * @return String message with style
      *
      */
-    public function flashMessenger() {
+    public function flashMessenger()
+    {
         $output = '';
         $current = Zend_Controller_Action_HelperBroker::getStaticHelper('FlashMessenger')->getCurrentMessages();
 
@@ -37,7 +39,4 @@ class Zend_View_Helper_FlashMessenger extends Zend_View_Helper_Abstract {
         }
         return $output;
     }
-
 }
-
-?>

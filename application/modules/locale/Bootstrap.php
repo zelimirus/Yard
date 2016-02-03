@@ -9,6 +9,6 @@
  * 
  * @version  august 2013
  */
-class Locale_Bootstrap extends Zend_Application_Module_Bootstrap{
-	
+class locale_Bootstrap extends Zend_Application_Module_Bootstrap
+{
 }

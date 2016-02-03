@@ -6,7 +6,8 @@
  * @author 
  * @version  April 2014
  */
-class My_Form_Default extends Zend_Form {
+class My_Form_Default extends Zend_Form
+{
 
     protected $element_decorators = array(
         'viewHelper',
@@ -48,7 +49,8 @@ class My_Form_Default extends Zend_Form {
         array(array('row' => 'HtmlTag'), array('tag' => 'div'))
     );
 
-    public function loadDefaultDecorators() {
+    public function loadDefaultDecorators()
+    {
         $this->setAttrib('enctype', 'multipart/form-data');
 
 // Set the decorator for the form itself
@@ -74,5 +76,4 @@ class My_Form_Default extends Zend_Form {
 
         return $this;
     }
-
 }

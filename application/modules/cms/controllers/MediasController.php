@@ -6,20 +6,23 @@
  * 
  * @version  August 2013
  */
-class Cms_MediasController extends Zend_Controller_Action {
+class Cms_MediasController extends Zend_Controller_Action
+{
 
     private $medias_model;
     private $media_libraries_model;
     private $media_libraries_medias_model;
 
-    public function init(){
+    public function init()
+    {
         $this->medias_model                 = new Cms_Model_Medias();
         $this->media_libraries_model        = new Cms_Model_MediaLibraries();
         $this->media_libraries_medias_model = new Cms_Model_MediaLibrariesMedias();
     }
 
-    public function indexAction() {
-        $this->view->form = new Cms_Form_MediasFilter;        
+    public function indexAction()
+    {
+        $this->view->form = new Cms_Form_MediasFilter;
         // Get sort from $_GET for pagination, default is id asc
         $sort = $this->_getParam('sort_by', 'id') . ' ' . $this->_getParam('sort_type', 'desc');
 
@@ -59,7 +62,8 @@ class Cms_MediasController extends Zend_Controller_Action {
         $this->view->page = (int) $this->_getParam('page', 1);
     }
 
-    public function newAction() {
+    public function newAction()
+    {
         $this->view->layout()->disableLayout();
         $this->_helper->viewRenderer->setNoRender(true);
 
@@ -67,7 +71,7 @@ class Cms_MediasController extends Zend_Controller_Action {
 
         if (!empty($_FILES)) {
             $file_info = pathinfo($_FILES['file']['name']);
-            $tempFile = $_FILES['file']['tmp_name'];             
+            $tempFile = $_FILES['file']['tmp_name'];
             $new_name = md5(rand(1000, 10000) . time() . $_FILES['file']['name']) . "." . preg_replace('/^.*\.([^.]+)$/D', '$1', $_FILES['file']['name']);
 
             $this->uploadAndSaveImage($new_name, $tempFile, $media_library->path);
@@ -80,11 +84,12 @@ class Cms_MediasController extends Zend_Controller_Action {
 
             $media_id = $this->medias_model->doSave($default_values);
 
-            $this->media_libraries_medias_model->saveByMediaLibraryId($media_id,$media_library->id);
+            $this->media_libraries_medias_model->saveByMediaLibraryId($media_id, $media_library->id);
         }
     }
 
-    public function editAction() {
+    public function editAction()
+    {
         // Try to find record by id
         $this->view->existing = $this->medias_model->getById((int) $this->_getParam('id', 0));
         
@@ -103,13 +108,12 @@ class Cms_MediasController extends Zend_Controller_Action {
         
         // Check is post and is posted data valid
         if ($this->_request->isPost() && $this->view->form->isValid($_POST)) {
-
             $values = $this->view->form->getValues();
 
-            $values['url'] = str_replace('/watch?v=','/v/',$values['url']).'?autoplay=1';
+            $values['url'] = str_replace('/watch?v=', '/v/', $values['url']).'?autoplay=1';
 
             unset($values['original']);
-            $this->medias_model->doSave($values,$this->view->existing->id);
+            $this->medias_model->doSave($values, $this->view->existing->id);
 
             if ($values > 0) {
                 My_Utilities::fmsg('Podaci su uspešno sačuvani.', 'success');
@@ -121,7 +125,8 @@ class Cms_MediasController extends Zend_Controller_Action {
         }
     }
 
-    public function deleteAction() {
+    public function deleteAction()
+    {
         $media_id = (int) $this->_getParam('id', 0);
         $media = $this->medias_model->getById($media_id);
         
@@ -133,32 +138,34 @@ class Cms_MediasController extends Zend_Controller_Action {
         $this->_redirect('/cms/medias/index/library_id/'.$media->media_library_id.'/page/' . $this->_getParam('page', 1));
     }
 
-    public function deleteRemovedFileAction() {
+    public function deleteRemovedFileAction()
+    {
         $this->view->layout()->disableLayout();
         $this->_helper->viewRenderer->setNoRender(true);
         
         $media_id = (int) $this->_getParam('media_id', 0);
 
-        if ($this->deleteMedia($media_id)) {        
+        if ($this->deleteMedia($media_id)) {
             $this->_response->setBody(json_encode(array('success' => 'true')));
         } else {
             $this->_response->setBody(json_encode(array('success' => 'false')));
         }
     }
 
-    public function getLastUploadedImageAction() {
+    public function getLastUploadedImageAction()
+    {
         $this->view->layout()->disableLayout();
         $this->_helper->viewRenderer->setNoRender(true);
 
         $title = preg_replace("/[^a-z0-9\.]/", " ", strtolower($this->_getParam('title')));
 
-        if(empty($title)){
+        if (empty($title)) {
             $this->_response->setBody(json_encode(array('success' => 'false')));
             return;
         }
 
         $file = $this->medias_model->getLastByTitle($title);
-        if(!$file){
+        if (!$file) {
             $this->_response->setBody(json_encode(array('success' => 'false')));
             return;
         }
@@ -166,19 +173,20 @@ class Cms_MediasController extends Zend_Controller_Action {
         $this->_response->setBody(json_encode(array('success' => 'true', 'file_name' => $file->toArray())));
     }
 
-    private function uploadAndSaveImage($new_name, $tempFile, $media_library_path, $width = null, $height = null){
+    private function uploadAndSaveImage($new_name, $tempFile, $media_library_path, $width = null, $height = null)
+    {
         $image = new Imagick($tempFile);
 
-        if($height && $width){
+        if ($height && $width) {
             $image->cropThumbnailImage($width, $height);
             $folder = $width.'x'.$height;
-        }else if($width && !$height){
-            $image->scaleImage($width, 0);   
+        } elseif ($width && !$height) {
+            $image->scaleImage($width, 0);
             $folder = 'master';
-        }else  if($height && !$width){
-            $image->scaleImage(0, $height);   
+        } elseif ($height && !$width) {
+            $image->scaleImage(0, $height);
             $folder = 'master';
-        }else{
+        } else {
             $folder = 'original';
         }
 
@@ -189,7 +197,8 @@ class Cms_MediasController extends Zend_Controller_Action {
     
 
 
-    private function deleteMedia($media_id){
+    private function deleteMedia($media_id)
+    {
         $media = $this->medias_model->getById($media_id);
 
         $array = array('original');
@@ -199,12 +208,12 @@ class Cms_MediasController extends Zend_Controller_Action {
             foreach ($array as $one) {
                 $image_path = substr(My_Utilities::getUploadMediaPathDiffSizes($media['file_name'], $media['path'], $one).'/'.$media['file_name'], 0, -4);
 
-                foreach(glob($image_path.'.*') as $file_name){
+                foreach (glob($image_path.'.*') as $file_name) {
                     if (is_file($file_name)) {
                         unlink($file_name);
                     }
                 }
-            }        
+            }
             return true;
         } else {
             return false;

@@ -9,6 +9,6 @@
  * 
  * @version  august 2013
  */
-class Admin_Bootstrap extends Zend_Application_Module_Bootstrap{
-	
+class admin_Bootstrap extends Zend_Application_Module_Bootstrap
+{
 }

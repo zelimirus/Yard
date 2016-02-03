@@ -9,6 +9,6 @@
  * 
  * @version  march 2014
  */
-class Default_Bootstrap extends Zend_Application_Module_Bootstrap{
-	
+class default_Bootstrap extends Zend_Application_Module_Bootstrap
+{
 }

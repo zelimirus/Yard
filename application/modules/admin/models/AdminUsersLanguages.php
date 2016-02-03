@@ -7,7 +7,8 @@
  *
  * @version  august 2013
  */
-class Admin_Model_AdminUsersLanguages extends My_Db_Table {
+class Admin_Model_AdminUsersLanguages extends My_Db_Table
+{
 
     protected $_name = 'admin_users_languages';
     protected $_primary = 'id';
@@ -20,7 +21,8 @@ class Admin_Model_AdminUsersLanguages extends My_Db_Table {
      * @param int id - if it is set than run update of given id, if it's not, than do insert
      * @return int id of inserted od updated row
      */
-    public function doSave($data, $id = null) {
+    public function doSave($data, $id = null)
+    {
         if ($id) {
             return $this->update($data, array('id = ?' => (int) $id));
         } else {
@@ -28,7 +30,8 @@ class Admin_Model_AdminUsersLanguages extends My_Db_Table {
         }
     }
 
-    public function getIdsByUserIdArray($user_id) {
+    public function getIdsByUserIdArray($user_id)
+    {
         $select = $this->select()->where('admin_user_id = ?', (int) $user_id);
         $result = $this->fetchAll($select);
         $return = array();
@@ -44,7 +47,8 @@ class Admin_Model_AdminUsersLanguages extends My_Db_Table {
      * @param array $cat_ids, categories to insert into table
      * @param int $article_id, id of article for all categories
      */
-    public function doSaveArray($language_ids, $user_id) {
+    public function doSaveArray($language_ids, $user_id)
+    {
         foreach ($language_ids as $id) {
             $this->doSave(array('language_id' => $id, 'admin_user_id' => $user_id));
         }
@@ -56,7 +60,8 @@ class Admin_Model_AdminUsersLanguages extends My_Db_Table {
      * @param int $article_id 
      * @return boolean if success or not
      */
-    public function doDeleteByUserId($user_id) {
+    public function doDeleteByUserId($user_id)
+    {
         return $this->delete(array('admin_user_id = ?' => (int) $user_id)) > 0;
     }
 }

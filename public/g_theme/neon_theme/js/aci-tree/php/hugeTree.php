@@ -11,12 +11,14 @@ require_once("$path/Tree.php");
 // it's a simple return based on the $parentId to know where we are
 // and if it's a valid branch (also limiting to the #10 deep levels)
 
-class HugeTree extends Tree {
+class hugeTree extends Tree
+{
     /*
      * $parentId will be the path to the folder.
      */
 
-    public function branch($parentId = null) {
+    public function branch($parentId = null)
+    {
         $branch = array();
         $path = explode('.', $parentId);
         $type = array_shift($path);
@@ -36,7 +38,8 @@ class HugeTree extends Tree {
      * $itemId will be the path to the file/folder.
      */
 
-    public function itemProps($itemId) {
+    public function itemProps($itemId)
+    {
         $path = explode('.', $itemId);
         $type = array_shift($path);
         switch ($type) {
@@ -53,7 +56,6 @@ class HugeTree extends Tree {
         }
         return parent::itemProps($itemId);
     }
-
 }
 
 $hugeTree = new HugeTree();
@@ -69,3 +71,4 @@ $hugeTree->json($branch, true);
 // note: for large and complex tree structures
 // probably the best way to do things is to return the first 2-3 levels
 // starting from the requested branch instead of returning the entire tree
+

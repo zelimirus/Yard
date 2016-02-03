@@ -1,1 +1,1 @@
-<?php return My_Translate_Adapter::getTranslate('sr_RS'); ?>
+<?php return My_Translate_Adapter::getTranslate('sr_RS');

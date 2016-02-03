@@ -4,7 +4,8 @@
 // as you can see, keep it simple it's the best way to do things :D
 // note: you'll need PHP >= 5.2 to run this
 
-abstract class Tree {
+abstract class Tree
+{
 
     /**
      * Get tree branch as KEY => ITEM.
@@ -18,7 +19,8 @@ abstract class Tree {
      * @param string $itemId
      * @return array
      */
-    public function itemProps($itemId) {
+    public function itemProps($itemId)
+    {
         return array(
             'inode' => null, // NULL = maybe a folder, TRUE - is a folder, FALSE - it's not a folder
             'open' => false, // should open folder?
@@ -26,7 +28,8 @@ abstract class Tree {
         );
     }
 
-    private function _json($parentId, Array &$json, $children) {
+    private function _json($parentId, array &$json, $children)
+    {
         $branch = $this->branch($parentId);
         foreach ($branch as $id => $label) {
             $props = $this->itemProps($id);
@@ -50,7 +53,8 @@ abstract class Tree {
      * @param string $parentId
      * @param bool $children - include children?
      */
-    public function json($parentId, $children = false) {
+    public function json($parentId, $children = false)
+    {
         $json = array();
         $this->_json($parentId, $json, $children);
         header('Content-type: application/json; charset=UTF-8');
@@ -58,5 +62,4 @@ abstract class Tree {
         echo json_encode($json);
         die;
     }
-
 }
